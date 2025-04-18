@@ -1,5 +1,5 @@
 # Project-specific ignores
-
+[Aa]ssets/[Ss]cenes/BrickApartmentKit/
 
 # This .gitignore file should be placed at the root of your Unity project directory
 #
