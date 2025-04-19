@@ -3920,7 +3920,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200685680}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
@@ -10371,13 +10371,14 @@ MonoBehaviour:
   interactDelay: 0.5
   interactable: 1
   desc: 
-  open: 0
+  messy: 0
   chain: 0
   mess: {fileID: 839449305}
   tidy: {fileID: 650287456}
   effectSource: {fileID: 0}
   effects: []
   animTime: 0.5
+  display: {fileID: 200685683}
 --- !u!1001 &519594031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12113,7 +12114,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608472085}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae43aef8e9e133f428c5f241b9681620, type: 3}
   m_Name: 
@@ -12124,13 +12125,14 @@ MonoBehaviour:
   interactDelay: 0.5
   interactable: 1
   desc: 
-  open: 0
+  messy: 0
   chain: 0
   mess: {fileID: 1961380844}
   tidy: {fileID: 2028247388}
   effectSource: {fileID: 0}
   effects: []
   animTime: 0.5
+  display: {fileID: 372269999}
 --- !u!1001 &610490927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16045,7 +16047,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836699262}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
@@ -16967,7 +16969,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872470698}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
@@ -18043,7 +18045,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922077771}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
@@ -24170,13 +24172,14 @@ MonoBehaviour:
   interactDelay: 0.5
   interactable: 1
   desc: 
-  open: 0
+  messy: 0
   chain: 1
   mess: {fileID: 1213577312}
   tidy: {fileID: 1412332747}
   effectSource: {fileID: 0}
   effects: []
   animTime: 0.5
+  display: {fileID: 836699264}
 --- !u!23 &1213577316
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25676,7 +25679,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276631271}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
@@ -26153,7 +26156,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297801182}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
@@ -28350,13 +28353,14 @@ MonoBehaviour:
   interactDelay: 0.5
   interactable: 1
   desc: 
-  open: 0
+  messy: 0
   chain: 1
   mess: {fileID: 1412332747}
   tidy: {fileID: 2093179227}
   effectSource: {fileID: 0}
   effects: []
   animTime: 0.5
+  display: {fileID: 872470701}
 --- !u!1001 &1415059644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31964,7 +31968,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611319888}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae43aef8e9e133f428c5f241b9681620, type: 3}
   m_Name: 
@@ -31975,13 +31979,14 @@ MonoBehaviour:
   interactDelay: 0.5
   interactable: 1
   desc: 
-  open: 0
+  messy: 0
   chain: 0
   mess: {fileID: 1393238500}
   tidy: {fileID: 366626336}
   effectSource: {fileID: 0}
   effects: []
   animTime: 0.5
+  display: {fileID: 244270262}
 --- !u!1001 &1615517867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36706,13 +36711,14 @@ MonoBehaviour:
   interactDelay: 0.5
   interactable: 1
   desc: 
-  open: 0
+  messy: 0
   chain: 0
   mess: {fileID: 19055273}
   tidy: {fileID: 2052319046}
   effectSource: {fileID: 0}
   effects: []
   animTime: 0.5
+  display: {fileID: 1297801185}
 --- !u!1 &1885294652
 GameObject:
   m_ObjectHideFlags: 0
@@ -41246,13 +41252,14 @@ MonoBehaviour:
   interactDelay: 0.5
   interactable: 1
   desc: 
-  open: 0
+  messy: 0
   chain: 0
   mess: {fileID: 1142508384}
   tidy: {fileID: 260376629}
   effectSource: {fileID: 0}
   effects: []
   animTime: 0.5
+  display: {fileID: 1276631274}
 --- !u!65 &2110896768
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41501,13 +41508,14 @@ MonoBehaviour:
   interactDelay: 0.5
   interactable: 1
   desc: 
-  open: 0
+  messy: 0
   chain: 0
   mess: {fileID: 2040052516}
   tidy: {fileID: 998118704}
   effectSource: {fileID: 0}
   effects: []
   animTime: 0.5
+  display: {fileID: 922077774}
 --- !u!1001 &2137544679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44293,6 +44301,8 @@ MonoBehaviour:
   dishesQueue:
   - {fileID: 1213577315}
   - {fileID: 1412332750}
+  taskIndex: 0
+  dishesIndex: 0
   currentTask: {fileID: 1213577315}
 --- !u!1001 &8771938923908571829
 PrefabInstance:

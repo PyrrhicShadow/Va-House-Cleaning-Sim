@@ -8,14 +8,14 @@ namespace PyrrhicSilva.Interactable
     public class HouseTask : Interactable
     {
         [SerializeField] string desc;
-        [SerializeField] internal bool open;
+        [SerializeField] internal bool messy;
         [SerializeField] internal bool chain;
         [SerializeField] internal GameObject mess; 
         [SerializeField] internal GameObject tidy; 
         [SerializeField] AudioSource effectSource;
         [SerializeField] AudioClip[] effects;
         [SerializeField] internal float animTime = 0.5f;
-        // [SerializeField] internal TMP_Text display; 
+        [SerializeField] internal TMP_Text display; 
 
         protected override void Awake()
         {
@@ -36,7 +36,7 @@ namespace PyrrhicSilva.Interactable
             if (tidy == null) {
                 Debug.Log(this.name + " is missing its cleaned state.");
             }
-            open = false;
+            messy = false;
             repeatable = false;
             tidy.gameObject.SetActive(true); 
             mess.gameObject.SetActive(false);  
@@ -47,31 +47,39 @@ namespace PyrrhicSilva.Interactable
         {
             if (interactable)
             {
-                if (open == false)
+                if (messy == false)
                 {
-                    tidy.gameObject.SetActive(true); 
-                    mess.gameObject.SetActive(false); 
+                    tidy.gameObject.SetActive(false); 
+                    mess.gameObject.SetActive(true); 
 
                     // if (effects != null && effects[0] != null) { 
                     //     effectSource.PlayOneShot(effects[0]); 
                     //     // gameManager.subtitles.DisplayAudioDescription(desc + " opening."); 
                     // }
-
-                    gameManager.TaskComplete(); 
+                    messy = true; 
                 }
                 else
                 {
-                    if (open == true)
+                    if (messy == true)
                     {
-                        tidy.SetActive(false); 
-                        mess.SetActive(true); 
+                        tidy.SetActive(true); 
+                        mess.SetActive(false); 
                         // if (effects != null && effects[1] != null) {
                         //     effectSource.PlayOneShot(effects[1]); 
                         //     // gameManager.subtitles.DisplaySubtitles(desc + " closing."); 
                         // }
+                        gameManager.TaskComplete(); 
+                        display.enabled = false; 
+                        messy = false; 
                     }
                 }
             }
+        }
+
+        public void ActivateTask() {
+            messy = false; 
+            InteractAction(); 
+            display.enabled = true; 
         }
     }
 }

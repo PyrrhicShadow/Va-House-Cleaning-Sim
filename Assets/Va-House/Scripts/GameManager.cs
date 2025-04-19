@@ -22,14 +22,15 @@ namespace PyrrhicSilva
         [SerializeField] internal GameObject setTable; 
         [SerializeField] internal HouseTask[] allTasks;
         [SerializeField] internal HouseTask[] dishesQueue;
-        internal int taskIndex = 0; 
-        internal int dishesIndex = 0;
+        [SerializeField] internal int taskIndex = 0; 
+        [SerializeField] internal int dishesIndex = 0;
         [SerializeField] internal HouseTask currentTask;
 
         void Awake()
         {
             currentTask = taskCleanTable;
             setTable.SetActive(false); 
+            dishesQueue[1].gameObject.SetActive(false); 
         }
 
 
@@ -55,7 +56,7 @@ namespace PyrrhicSilva
         {
             if (currentTask.chain)
             {
-                if (dishesIndex > 2)
+                if (dishesIndex > 1)
                 {
                     dishesIndex = 0;
                 }
@@ -78,7 +79,7 @@ namespace PyrrhicSilva
             {
                 currentTask = RandomTask();
             }
-            currentTask.gameObject.SetActive(true); 
+            currentTask.ActivateTask(); 
         }
 
         private HouseTask RandomTask()
