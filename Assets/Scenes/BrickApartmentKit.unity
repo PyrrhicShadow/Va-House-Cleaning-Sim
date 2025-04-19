@@ -16047,7 +16047,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836699262}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
@@ -28353,7 +28353,7 @@ MonoBehaviour:
   interactDelay: 0.5
   interactable: 1
   desc: wash the dishes
-  messy: 0
+  messy: 1
   chain: 1
   mess: {fileID: 1412332747}
   tidy: {fileID: 2093179227}
@@ -44592,14 +44592,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interact: {fileID: 383360169909618824}
   frontDoor: {fileID: 69853048}
-  taskCleanTable: {fileID: 1213577315}
-  taskMakeBed: {fileID: 1611319891}
-  taskStraightenRug: {fileID: 608472088}
-  taskTidyCouch: {fileID: 2110896767}
-  taskCleanSpill: {fileID: 1884408483}
-  taskWashDishes: {fileID: 1412332750}
-  taskScrubTub: {fileID: 511789555}
-  taskOrganizeBooks: {fileID: 2130507771}
   setTable: {fileID: 2093179227}
   allTasks:
   - {fileID: 1213577315}

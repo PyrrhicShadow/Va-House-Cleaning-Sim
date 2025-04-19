@@ -12,14 +12,6 @@ namespace PyrrhicSilva
         [SerializeField] internal Interact interact;
         [SerializeField] internal OpenAndClose frontDoor;
         [Header("Task objects")]
-        [SerializeField] internal HouseTask taskCleanTable;
-        [SerializeField] internal HouseTask taskMakeBed;
-        [SerializeField] internal HouseTask taskStraightenRug;
-        [SerializeField] internal HouseTask taskTidyCouch;
-        [SerializeField] internal HouseTask taskCleanSpill;
-        [SerializeField] internal HouseTask taskWashDishes;
-        [SerializeField] internal HouseTask taskScrubTub;
-        [SerializeField] internal HouseTask taskOrganizeBooks;
         [SerializeField] internal GameObject setTable;
         [SerializeField] internal HouseTask[] allTasks;
         [SerializeField] internal HouseTask[] dishesQueue;
@@ -30,9 +22,7 @@ namespace PyrrhicSilva
 
         void Awake()
         {
-            currentTask = taskCleanTable;
-            setTable.SetActive(false);
-            dishesQueue[1].gameObject.SetActive(false);
+            StartTasks(); 
         }
 
 
@@ -53,6 +43,13 @@ namespace PyrrhicSilva
         void OnInteract()
         {
             interact.Press();
+            currentTask.ActivateTask(); 
+        }
+
+        void StartTasks() {
+            currentTask = allTasks[0];
+            setTable.SetActive(false);
+            dishesQueue[1].gameObject.SetActive(false);
         }
 
         public void TaskComplete()
@@ -71,6 +68,7 @@ namespace PyrrhicSilva
             {
                 currentTask = RandomTask();
             }
+            currentTask.gameObject.SetActive(true); 
             currentTask.ActivateTask();
         }
 
@@ -85,7 +83,7 @@ namespace PyrrhicSilva
                 {
                     dishesIndex = 0;
                 }
-                
+
                 temp = dishesQueue[dishesIndex];
                 setTable.SetActive(false);
 

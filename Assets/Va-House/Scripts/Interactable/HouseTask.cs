@@ -72,19 +72,32 @@ namespace PyrrhicSilva.Interactable
             }
         }
 
+        public override void EnableTrigger()
+        {
+            base.EnableTrigger();
+            display.enabled = true; 
+        }
+
+        public override void DisableTrigger()
+        {
+            base.DisableTrigger();
+            display.enabled = false; 
+        }
+
         public void ActivateTask()
         {
             interactable = true; 
             messy = true;
             SetMessy(); 
-            display.enabled = true;
             gameManager.UpdateTaskDisplay(desc); 
+            EnableTrigger(); 
         }
 
         void SetMessy()
         {
             tidy.gameObject.SetActive(!messy);
             mess.gameObject.SetActive(messy);
+            interactable = false; 
         }
     }
 }
