@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro; 
 
 namespace PyrrhicSilva.Interactable
 {
@@ -14,6 +15,7 @@ namespace PyrrhicSilva.Interactable
         [SerializeField] AudioSource effectSource;
         [SerializeField] AudioClip[] effects;
         [SerializeField] internal float animTime = 0.5f;
+        // [SerializeField] internal TMP_Text display; 
 
         protected override void Awake()
         {
@@ -35,7 +37,9 @@ namespace PyrrhicSilva.Interactable
                 Debug.Log(this.name + " is missing its cleaned state.");
             }
             open = false;
-            repeatable = false; 
+            repeatable = false;
+            tidy.SetActive(true); 
+            mess.SetActive(false);  
         }
 
         /// <summary>Opens or closes this OpenAndClose object </summary>
