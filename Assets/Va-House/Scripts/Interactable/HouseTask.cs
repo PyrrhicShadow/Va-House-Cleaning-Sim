@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro; 
+using TMPro;
 
 namespace PyrrhicSilva.Interactable
 {
@@ -10,12 +10,12 @@ namespace PyrrhicSilva.Interactable
         [SerializeField] string desc;
         [SerializeField] internal bool messy;
         [SerializeField] internal bool chain;
-        [SerializeField] internal GameObject mess; 
-        [SerializeField] internal GameObject tidy; 
+        [SerializeField] internal GameObject mess;
+        [SerializeField] internal GameObject tidy;
         [SerializeField] AudioSource effectSource;
         [SerializeField] AudioClip[] effects;
         [SerializeField] internal float animTime = 0.5f;
-        [SerializeField] internal TMP_Text display; 
+        [SerializeField] internal TMP_Text display;
 
         protected override void Awake()
         {
@@ -33,13 +33,13 @@ namespace PyrrhicSilva.Interactable
             {
                 Debug.Log(this.name + " is missing its messy state.");
             }
-            if (tidy == null) {
+            if (tidy == null)
+            {
                 Debug.Log(this.name + " is missing its cleaned state.");
             }
-            messy = false;
+            interactable = false; 
             repeatable = false;
-            tidy.gameObject.SetActive(true); 
-            mess.gameObject.SetActive(false);  
+            SetMessy();
         }
 
         /// <summary>Opens or closes this OpenAndClose object </summary>
@@ -49,37 +49,42 @@ namespace PyrrhicSilva.Interactable
             {
                 if (messy == false)
                 {
-                    tidy.gameObject.SetActive(false); 
-                    mess.gameObject.SetActive(true); 
 
                     // if (effects != null && effects[0] != null) { 
                     //     effectSource.PlayOneShot(effects[0]); 
                     //     // gameManager.subtitles.DisplayAudioDescription(desc + " opening."); 
                     // }
-                    messy = true; 
+                    messy = true;
                 }
                 else
                 {
-                    if (messy == true)
-                    {
-                        tidy.SetActive(true); 
-                        mess.SetActive(false); 
-                        // if (effects != null && effects[1] != null) {
-                        //     effectSource.PlayOneShot(effects[1]); 
-                        //     // gameManager.subtitles.DisplaySubtitles(desc + " closing."); 
-                        // }
-                        gameManager.TaskComplete(); 
-                        display.enabled = false; 
-                        messy = false; 
-                    }
+
+                    // if (effects != null && effects[1] != null) {
+                    //     effectSource.PlayOneShot(effects[1]); 
+                    //     // gameManager.subtitles.DisplaySubtitles(desc + " closing."); 
+                    // }
+                    
+                    display.enabled = false;
+                    messy = false;
+                    gameManager.TaskComplete();
                 }
+                SetMessy(); 
             }
         }
 
-        public void ActivateTask() {
-            messy = false; 
-            InteractAction(); 
-            display.enabled = true; 
+        public void ActivateTask()
+        {
+            interactable = true; 
+            messy = true;
+            SetMessy(); 
+            display.enabled = true;
+            gameManager.UpdateTaskDisplay(desc); 
+        }
+
+        void SetMessy()
+        {
+            tidy.gameObject.SetActive(!messy);
+            mess.gameObject.SetActive(messy);
         }
     }
 }
