@@ -38,8 +38,8 @@ namespace PyrrhicSilva.Interactable
             }
             open = false;
             repeatable = false;
-            tidy.SetActive(true); 
-            mess.SetActive(false);  
+            tidy.gameObject.SetActive(true); 
+            mess.gameObject.SetActive(false);  
         }
 
         /// <summary>Opens or closes this OpenAndClose object </summary>
@@ -49,13 +49,15 @@ namespace PyrrhicSilva.Interactable
             {
                 if (open == false)
                 {
-                    tidy.SetActive(true); 
-                    mess.SetActive(false); 
+                    tidy.gameObject.SetActive(true); 
+                    mess.gameObject.SetActive(false); 
 
                     // if (effects != null && effects[0] != null) { 
                     //     effectSource.PlayOneShot(effects[0]); 
                     //     // gameManager.subtitles.DisplayAudioDescription(desc + " opening."); 
                     // }
+
+                    gameManager.TaskComplete(); 
                 }
                 else
                 {

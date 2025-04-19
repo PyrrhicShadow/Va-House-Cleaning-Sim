@@ -37,7 +37,7 @@ namespace PyrrhicSilva
         void Start()
         {
             frontDoor.InteractAction();
-            currentTask.enabled = true;
+            currentTask.gameObject.SetActive(true);
         }
 
         // Update is called once per frame
@@ -51,7 +51,7 @@ namespace PyrrhicSilva
             interact.Press();
         }
 
-        void TaskComplete()
+        public void TaskComplete()
         {
             if (currentTask.chain)
             {
@@ -78,6 +78,7 @@ namespace PyrrhicSilva
             {
                 currentTask = RandomTask();
             }
+            currentTask.gameObject.SetActive(true); 
         }
 
         private HouseTask RandomTask()
