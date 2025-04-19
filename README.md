@@ -8,14 +8,15 @@ An existential house-cleaning sim liberally inspired by the level "House" in Dav
 
 Cleaning jobs include 
 
-* clearing dining table 
-* straightening rug 
-* scrubbing bathtub
-* washing dishes 
-* straightening couch 
-* straightening bed
-* straightening bookshelf
+* clearing the table 
+* straightening the rug 
+* scrubbing the bathtub
+* washing the dishes 
+* tidying the couch 
+* cleaning a spill
+* making the bed
+* organizing the bookshelf
 
 # Chat
 
-Of course, the lovely homeowner will chat with you on a variety of existential topics. Answer in any way you like - your choices don't meaningfully impact the story. 
+Featuring a podcast by Pyrrhic Silva for your listening enjoyment. 
