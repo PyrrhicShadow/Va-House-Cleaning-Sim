@@ -26,6 +26,7 @@ Featuring a podcast by Pyrrhic Silva for your listening enjoyment.
 * Starter Assets - First Person Character Controller by [Unity Technologies](https://assetstore.unity.com/publishers/1) from the [Unity Asset Store](https://assetstore.unity.com/packages/essentials/starter-assets-first-person-character-controller-196525)
 * Apartment Kit by [Brick Project Studio](https://assetstore.unity.com/publishers/32000) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/apartment-kit-124055) 
 * Books Pack (deprecated) by [Vertex Studio](https://assetstore.unity.com/publishers/2053) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/props/interior/books-pack-5484) 
+* Modular Sofa FREE by [Vertex Studio](https://assetstore.unity.com/publishers/2053) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/props/cardboard-boxes-with-tape-305511)
 * Rag by [GVODZY](https://assetstore.unity.com/publishers/91841) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/props/rag-305431)
 * Cardboard Boxes with Tap by [GVODZY](https://assetstore.unity.com/publishers/91841) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/props/cardboard-boxes-with-tape-305511)
 * Distant Lands Free Characters by Distant Lands from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/characters/distant-lands-free-characters-178123)
