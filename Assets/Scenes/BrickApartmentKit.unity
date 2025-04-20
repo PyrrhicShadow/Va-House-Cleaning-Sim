@@ -10250,7 +10250,7 @@ MonoBehaviour:
   repeatable: 0
   interactDelay: 2
   interactable: 1
-  desc: clear the table
+  desc: Could you please clear the table?
   messy: 1
   chain: 1
   mess: {fileID: 434769871}
@@ -11316,7 +11316,8 @@ MonoBehaviour:
   repeatable: 0
   interactDelay: 2
   interactable: 1
-  desc: scrub the tub
+  desc: Last I checked, the tub was getting a bit dirty. How about you scrub it down
+    the best you can.
   messy: 0
   chain: 0
   mess: {fileID: 839449305}
@@ -13377,7 +13378,7 @@ MonoBehaviour:
   repeatable: 0
   interactDelay: 2
   interactable: 1
-  desc: straighten the rug
+  desc: Why don't you straighten the rug in the bedroom?
   messy: 1
   chain: 0
   mess: {fileID: 1961380844}
@@ -31651,7 +31652,7 @@ MonoBehaviour:
   repeatable: 0
   interactDelay: 2
   interactable: 1
-  desc: wash the dishes
+  desc: Say, these dishes need to be washed. Why don't you come do that.
   messy: 1
   chain: 1
   mess: {fileID: 1412332747}
@@ -35650,7 +35651,7 @@ MonoBehaviour:
   repeatable: 0
   interactDelay: 2
   interactable: 1
-  desc: make the bed
+  desc: Would you please run to the bedroom and make the bed?
   messy: 1
   chain: 0
   mess: {fileID: 1393238500}
@@ -40971,7 +40972,7 @@ MonoBehaviour:
   repeatable: 0
   interactDelay: 2
   interactable: 1
-  desc: clean this spill
+  desc: Looks like someone spilled a drink by the couch! Maybe mop that up as well.
   messy: 1
   chain: 0
   mess: {fileID: 19055273}
@@ -46089,7 +46090,7 @@ MonoBehaviour:
   repeatable: 0
   interactDelay: 2
   interactable: 1
-  desc: tidy up the couch
+  desc: Would you straighten the pillows on the couch out here?
   messy: 0
   chain: 0
   mess: {fileID: 1142508384}
@@ -46575,7 +46576,8 @@ MonoBehaviour:
   repeatable: 0
   interactDelay: 2
   interactable: 1
-  desc: organize the shelves
+  desc: Are all the books scattered on the floor in the bedroom? If so, could you
+    put them back on the shelf?
   messy: 1
   chain: 0
   mess: {fileID: 2040052516}
@@ -49354,6 +49356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interact: {fileID: 383360169909618824}
   frontDoor: {fileID: 69853048}
+  homeownerController: {fileID: 0}
   setTable: {fileID: 2093179227}
   allTasks:
   - {fileID: 434769872}

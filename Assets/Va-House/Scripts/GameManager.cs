@@ -97,7 +97,7 @@ namespace PyrrhicSilva
 
         public void UpdateTaskDisplay(string taskName)
         {
-            taskDisplay.text = "Could you please " + taskName + "?";
+            taskDisplay.text = "" + taskName;
         }
 
         public void CloseFrontDoor()
