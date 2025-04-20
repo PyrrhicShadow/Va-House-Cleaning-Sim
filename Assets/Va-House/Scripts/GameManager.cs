@@ -11,6 +11,7 @@ namespace PyrrhicSilva
 
         [SerializeField] Interact interact;
         [SerializeField] OpenAndClose frontDoor;
+        [SerializeField] HomeownerController homeownerController; 
         [Header("Task objects")]
         [SerializeField] GameObject setTable;
         [SerializeField] HouseTask[] allTasks;
