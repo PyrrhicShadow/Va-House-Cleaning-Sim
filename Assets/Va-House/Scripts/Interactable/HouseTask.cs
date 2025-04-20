@@ -16,6 +16,8 @@ namespace PyrrhicSilva.Interactable
         [SerializeField] AudioClip[] effects;
         [SerializeField] internal float animTime = 0.5f;
         [SerializeField] internal TMP_Text display;
+        [SerializeField] int tasksTillReset = 3;
+        int lastTaskIndex; 
 
         protected override void Awake()
         {
@@ -42,6 +44,15 @@ namespace PyrrhicSilva.Interactable
             SetMessy();
         }
 
+        protected override void Update() {
+            if (!messy && !chain) {
+                if (gameManager.taskIndex - lastTaskIndex > tasksTillReset) {
+                    messy = true; 
+                    SetMessy(); 
+                }
+            }
+        }
+
         /// <summary>Opens or closes this OpenAndClose object </summary>
         public override void InteractAction()
         {
@@ -66,6 +77,7 @@ namespace PyrrhicSilva.Interactable
                     
                     display.enabled = false;
                     messy = false;
+                    lastTaskIndex = gameManager.taskIndex; 
                     gameManager.TaskComplete();
                 }
                 SetMessy(); 

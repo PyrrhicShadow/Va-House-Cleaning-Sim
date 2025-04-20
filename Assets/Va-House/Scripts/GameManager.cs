@@ -9,20 +9,21 @@ namespace PyrrhicSilva
     public class GameManager : MonoBehaviour
     {
 
-        [SerializeField] internal Interact interact;
-        [SerializeField] internal OpenAndClose frontDoor;
+        [SerializeField] Interact interact;
+        [SerializeField] OpenAndClose frontDoor;
         [Header("Task objects")]
-        [SerializeField] internal GameObject setTable;
-        [SerializeField] internal HouseTask[] allTasks;
-        [SerializeField] internal HouseTask[] dishesQueue;
-        [SerializeField] internal int taskIndex = 0;
+        [SerializeField] GameObject setTable;
+        [SerializeField] HouseTask[] allTasks;
+        [SerializeField] HouseTask[] dishesQueue;
+        [SerializeField] int _taskIndex = 0;
+        public int taskIndex { get { return _taskIndex; } internal set { _taskIndex = value; } }
         [SerializeField] internal int dishesIndex = 0;
-        [SerializeField] internal HouseTask currentTask;
-        [SerializeField] internal TMP_Text taskDisplay;
+        [SerializeField] HouseTask currentTask;
+        [SerializeField] TMP_Text taskDisplay;
 
         void Awake()
         {
-            StartTasks(); 
+            currentTask = allTasks[0];
         }
 
 
@@ -30,8 +31,6 @@ namespace PyrrhicSilva
         void Start()
         {
             frontDoor.InteractAction();
-            currentTask.gameObject.SetActive(true);
-            currentTask.ActivateTask();
         }
 
         // Update is called once per frame
@@ -43,13 +42,15 @@ namespace PyrrhicSilva
         void OnInteract()
         {
             interact.Press();
-            currentTask.ActivateTask(); 
+            currentTask.ActivateTask();
         }
 
-        void StartTasks() {
-            currentTask = allTasks[0];
+        void StartTasks()
+        {
             setTable.SetActive(false);
             dishesQueue[1].gameObject.SetActive(false);
+            currentTask.gameObject.SetActive(true);
+            currentTask.ActivateTask();
         }
 
         public void TaskComplete()
@@ -68,7 +69,7 @@ namespace PyrrhicSilva
             {
                 currentTask = RandomTask();
             }
-            currentTask.gameObject.SetActive(true); 
+            currentTask.gameObject.SetActive(true);
             currentTask.ActivateTask();
         }
 
@@ -96,6 +97,12 @@ namespace PyrrhicSilva
         public void UpdateTaskDisplay(string taskName)
         {
             taskDisplay.text = "Could you please " + taskName + "?";
+        }
+
+        public void CloseFrontDoor()
+        {
+            frontDoor.InteractAction();
+            StartTasks();
         }
     }
 }
