@@ -27,6 +27,8 @@ namespace PyrrhicSilva.Interactable
             {
                 desc = "Open and close";
             }
+
+            display.enabled = false; 
         }
 
         protected virtual void Start()
