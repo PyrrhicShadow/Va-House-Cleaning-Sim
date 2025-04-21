@@ -35,7 +35,7 @@ namespace PyrrhicSilva.Interactable {
             }
         }
 
-        // <summary>By default, disables the trigger collider</summary>
+        /// <summary>By default, disables the trigger collider</summary>
         [ContextMenu("Interact")]
         public virtual void InteractAction() {
             if (interactable) {

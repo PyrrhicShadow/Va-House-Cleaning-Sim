@@ -71,7 +71,7 @@ namespace PyrrhicSilva.Interactable
                 else
                 {
                     gameManager.TaskComplete();
-                    interactable = false;
+                    
                 }
                 queueActive = false;
             }
@@ -94,10 +94,11 @@ namespace PyrrhicSilva.Interactable
                         // gameManager.subtitles.DisplaySubtitles(desc + " closing."); 
                     }
                     queueActive = true;
-                    gameManager.subtitles.PlayNarration(postNarration);
+                    gameManager.subtitles.PlayNarration(postNarration, false); // cut off previous dialogue
                     lastTaskIndex = gameManager.taskIndex;
                     messy = false;
                     DisableTrigger(); 
+                    interactable = false;
                 }
                 SetMessy();
             }

@@ -16,8 +16,10 @@ namespace PyrrhicSilva.UI
         [SerializeField] internal float readingSpeed;
         [SerializeField] GameManager gameManager;
         [SerializeField] AudioSource dialogueSounds;
+        [SerializeField] AudioClip defaultDialogueClip;
         private string[] narration;
         private string[] narrationQueue;
+        private AudioClip soundQueue;
         public bool playNarration { get; private set; } = false;
         private int fontSize;
         private TMP_FontAsset font;
@@ -74,21 +76,34 @@ namespace PyrrhicSilva.UI
 
         }
 
-        /// <summary>Begins playback of multiple lines of narration with supplied speech sound.</summary>
+        /// <summary>Begins playback of multiple lines of narration with supplied speech sound, adding line to queue if dialogue is already playing.</summary>
+        /// <param name="narration">Lines to play</param>
+        /// <param name="clip">Speech sound</param>
         public void PlayNarration(string[] narration, AudioClip clip)
         {
-            dialogueSounds.clip = clip;
-            PlayNarration(narration);
+            PlayNarration(narration, clip, true);
+        }
+
+        /// <summary>Begins playback of multiple lines of narration with default speech sound.</summary>
+        /// <param name="narration">Lines to play</param>
+        /// <param name="queue">True to add to queue, false to cut off previously playing dialogue</param>
+        public void PlayNarration(string[] narration, bool queue)
+        {
+            PlayNarration(narration, defaultDialogueClip, queue);
         }
 
         /// <summary>Begins playback of multiple lines of narration.</summary>
-        public void PlayNarration(string[] narration)
+        /// <param name="narration">Lines to play</param>
+        /// <param name="clip">Speech sound</param>
+        /// <param name="queue">True to add to queue, false to cut off previously playing dialogue</param>
+        public void PlayNarration(string[] narration, AudioClip clip, bool queue)
         {
-            if (gameManager.narrationPlaying)
+            if (queue && gameManager.narrationPlaying)
             {
                 // queue next narration set 
                 if (narrationQueue == null)
                 {
+                    soundQueue = clip;
                     narrationQueue = narration;
                 }
                 else
@@ -103,17 +118,25 @@ namespace PyrrhicSilva.UI
             else
             {
                 this.narration = narration;
+                dialogueSounds.clip = clip;
                 playNarration = true;
             }
         }
 
+        /// <summary>Begins playback of multiple lines of narration with default speech sound, adding line to queue if dialogue is already playing.</summary>
+        /// <param name="narration">Lines to play</param>
+        public void PlayNarration(string[] narration)
+        {
+            PlayNarration(narration, defaultDialogueClip, true);
+        }
+
         protected IEnumerator PlayNarrationCo()
         {
-            int soundGap = 3; 
+            int soundGap = 3;
             ShowSubtitles();
             for (int i = 0; i < narration.Length; i++)
             {
-                if (i % soundGap == 0 && i < narration.Length - 2*soundGap)
+                if (i % soundGap == 0 && i < narration.Length - soundGap)
                 {
                     dialogueSounds.Play();
                 }
@@ -144,13 +167,13 @@ namespace PyrrhicSilva.UI
         }
 
         /// <summary>Shows a line of subtitles</summary>
-        public void DisplaySubtitles(string line)
+        private void DisplaySubtitles(string line)
         {
             subtitleTextBox.text = line.Trim();
         }
 
         /// <summary>Adds a line of audio description to the subtitltes</summary>
-        public void DisplayAudioDescription(string desc)
+        private void DisplayAudioDescription(string desc)
         {
             // if (gameManager.audioDescriptionOn) { 
             //     Show();  
@@ -167,13 +190,13 @@ namespace PyrrhicSilva.UI
             HideSubtitles();
         }
 
-        public void ShowSubtitles()
+        private void ShowSubtitles()
         {
             canvas.enabled = true;
             // Debug.Log("Subtitles showing."); 
         }
 
-        public void HideSubtitles()
+        private void HideSubtitles()
         {
             canvas.enabled = false;
             // subtitleTextBox.text = string.Empty;

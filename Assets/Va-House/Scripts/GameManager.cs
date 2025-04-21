@@ -173,8 +173,8 @@ namespace PyrrhicSilva
                 podcast.Pause();
                 Save();
             }
-            narrationPlaying = false; // cuts off whatever dialogue that was playing before leaving 
-            subtitles.PlayNarration(exitHouseLines);
+            
+            subtitles.PlayNarration(exitHouseLines, false); // cuts off whatever dialogue that was playing before leaving 
         }
 
         public void EndGame()
