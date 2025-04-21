@@ -30,6 +30,6 @@ Featuring a podcast by Pyrrhic Silva for your listening enjoyment.
 * Rag by [GVODZY](https://assetstore.unity.com/publishers/91841) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/props/rag-305431)
 * Cardboard Boxes with Tap by [GVODZY](https://assetstore.unity.com/publishers/91841) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/props/cardboard-boxes-with-tape-305511)
 * Distant Lands Free Characters by Distant Lands from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/characters/distant-lands-free-characters-178123)
-Free 32 RPG Animations by [Blink](https://assetstore.unity.com/publishers/49855) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/animations/free-32-rpg-animations-215058)
+* Free 32 RPG Animations by [Blink](https://assetstore.unity.com/publishers/49855) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/animations/free-32-rpg-animations-215058)
 * Skybox Series Free by [Avionx](https://assetstore.unity.com/publishers/31837) from the [Unity Asset Store](https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633)
 * Lamppost by [MaxDragon](https://assetstore.unity.com/publishers/82426) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/urban/lamppost-269488)
