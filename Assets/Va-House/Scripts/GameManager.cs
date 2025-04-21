@@ -15,7 +15,6 @@ namespace PyrrhicSilva
         [SerializeField] OpenAndClose frontDoor;
         [SerializeField] FirstPersonController character;
         [SerializeField] internal UI.SubtitleController subtitles;
-        // [SerializeField] HomeownerController homeownerController;
         [Header("Dialogue lines")]
         [SerializeField] string[] gameOpeningLines;
         [SerializeField] string[] introPodcastLines;
@@ -24,6 +23,9 @@ namespace PyrrhicSilva
         public bool playNarration { get; private set; } = false;
         public bool narrationPlaying { get; private set; } = false;
         internal bool subtitlesOn = true;
+        [Header("Audio")]
+        [SerializeField] AudioSource outdoors; 
+        [SerializeField] AudioSource podcast; 
         [Header("Task objects")]
         [SerializeField] GameObject setTable;
         [SerializeField] HouseTask[] allTasks;
@@ -191,6 +193,7 @@ namespace PyrrhicSilva
         }
         public void CloseFrontDoor()
         {
+            outdoors.Stop(); 
             frontDoor.InteractAction();
             StartTasks();
         }
