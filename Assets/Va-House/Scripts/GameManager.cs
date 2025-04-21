@@ -18,14 +18,19 @@ namespace PyrrhicSilva
         [Header("Dialogue lines")]
         [SerializeField] string[] gameOpeningLines;
         [SerializeField] string[] introPodcastLines;
+        [SerializeField] string[] exitHouseLines;
+        [SerializeField] string[] returnLines;
         private string[] narration;
         private string[] narrationQueue;
         public bool playNarration { get; private set; } = false;
         public bool narrationPlaying { get; private set; } = false;
         internal bool subtitlesOn = true;
         [Header("Audio")]
-        [SerializeField] AudioSource outdoors; 
-        [SerializeField] AudioSource podcast; 
+        [SerializeField] AudioSource outdoors;
+        [SerializeField] AudioSource podcast;
+        [Header("Entering Exiting")]
+        [SerializeField] ColExitInteract entering;
+        [SerializeField] ColEnterInteract exiting;
         [Header("Task objects")]
         [SerializeField] GameObject setTable;
         [SerializeField] HouseTask[] allTasks;
@@ -46,6 +51,7 @@ namespace PyrrhicSilva
         // Start is called before the first frame update
         void Start()
         {
+            exiting.gameObject.SetActive(false);
             frontDoor.InteractAction();
         }
 
@@ -82,10 +88,21 @@ namespace PyrrhicSilva
 
         public void StartTasks()
         {
-            setTable.SetActive(false);
-            dishesQueue[1].gameObject.SetActive(false);
+            if (taskIndex == 0)
+            {
+                setTable.SetActive(false);
+                dishesQueue[1].gameObject.SetActive(false);
+                PlayNarration(gameOpeningLines);
+            }
+            else
+            {
+                PlayNarration(returnLines);
+                if (taskIndex >= allTasks.Length)
+                {
+                    podcast.UnPause();
+                }
+            }
             currentTask.gameObject.SetActive(true);
-            PlayNarration(gameOpeningLines);
             currentTask.ActivateTask();
         }
 
@@ -94,7 +111,12 @@ namespace PyrrhicSilva
             taskIndex++;
             if (taskIndex == allTasks.Length)
             {
+                if (PlayerPrefs.HasKey("podcast progress"))
+                {
+                    podcast.time = PlayerPrefs.GetFloat("podcast progress");
+                }
                 PlayNarration(introPodcastLines);
+                podcast.Play();
             }
             NextTask();
         }
@@ -193,10 +215,57 @@ namespace PyrrhicSilva
         }
         public void CloseFrontDoor()
         {
-            outdoors.Stop(); 
+            outdoors.Pause();
+            exiting.gameObject.SetActive(true);
+            exiting.EnableTrigger();
             frontDoor.InteractAction();
             StartTasks();
         }
 
+        public void LeaveHouse()
+        {
+            outdoors.UnPause();
+            if (podcast.isPlaying)
+            {
+                podcast.Pause();
+                Save();
+            }
+            narrationPlaying = false; // cuts off whatever dialogue that was playing before leaving 
+            PlayNarration(exitHouseLines);
+        }
+
+        public void EndGame()
+        {
+            Debug.Log("End game.");
+        }
+
+        public void Save()
+        {
+            float podcastProgress = 0;
+            if (podcast.isPlaying)
+            {
+                podcastProgress = podcast.time - 5;
+                if (podcastProgress < 0)
+                {
+                    podcastProgress = 0;
+                }
+            }
+            PlayerPrefs.SetFloat("podcast progress", podcastProgress);
+        }
+
+        private void OnDisable()
+        {
+            Save();
+        }
+
+        private void OnApplicationPause()
+        {
+            Save();
+        }
+
+        private void OnApplicationQuit()
+        {
+            Save();
+        }
     }
 }
