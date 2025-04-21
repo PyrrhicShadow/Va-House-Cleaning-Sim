@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 namespace PyrrhicSilva.UI
 {
@@ -14,7 +15,10 @@ namespace PyrrhicSilva.UI
         [SerializeField] protected Image textWindow;
         [SerializeField] internal float readingSpeed;
         [SerializeField] GameManager gameManager;
-
+        [SerializeField] AudioSource dialogueSounds;
+        private string[] narration;
+        private string[] narrationQueue;
+        public bool playNarration { get; private set; } = false;
         private int fontSize;
         private TMP_FontAsset font;
         private Color color;
@@ -39,10 +43,21 @@ namespace PyrrhicSilva.UI
             }
         }
 
+        void Update()
+        {
+            if (playNarration)
+            {
+                gameManager.narrationPlaying = true;
+                StartCoroutine(PlayNarrationCo());
+                Debug.Log("Narration playing.");
+                playNarration = false;
+            }
+        }
+
         private void Setup()
         {
             canvas.gameObject.GetComponent<GraphicRaycaster>().enabled = false;
-            Hide();
+            HideSubtitles();
 
             // Load subtitle settings from PlayerPrefs
 
@@ -57,6 +72,75 @@ namespace PyrrhicSilva.UI
             // textWindow.color = windowColor; 
             textWindow.raycastTarget = false;
 
+        }
+
+        /// <summary>Begins playback of multiple lines of narration with supplied speech sound.</summary>
+        public void PlayNarration(string[] narration, AudioClip clip)
+        {
+            dialogueSounds.clip = clip;
+            PlayNarration(narration);
+        }
+
+        /// <summary>Begins playback of multiple lines of narration.</summary>
+        public void PlayNarration(string[] narration)
+        {
+            if (gameManager.narrationPlaying)
+            {
+                // queue next narration set 
+                if (narrationQueue == null)
+                {
+                    narrationQueue = narration;
+                }
+                else
+                {
+                    for (int i = 0; i < narration.Length; i++)
+                    {
+                        narrationQueue.Append(narration[i]);
+                    }
+                }
+                Debug.Log("Narration already playing.");
+            }
+            else
+            {
+                this.narration = narration;
+                playNarration = true;
+            }
+        }
+
+        protected IEnumerator PlayNarrationCo()
+        {
+            int soundGap = 3; 
+            ShowSubtitles();
+            for (int i = 0; i < narration.Length; i++)
+            {
+                if (i % soundGap == 0 && i < narration.Length - 2*soundGap)
+                {
+                    dialogueSounds.Play();
+                }
+                float length = 1.5f;
+                length = (float)narration[i].Length * readingSpeed;
+                DisplaySubtitles(narration[i]);
+                yield return new WaitForSeconds(length);
+                ShowSubtitles();
+                dialogueSounds.Stop();
+            }
+            if (narrationQueue != null)
+            {
+                narration = narrationQueue;
+                narrationQueue = null;
+                StartCoroutine(PlayNarrationCo());
+            }
+            else
+            {
+                gameManager.narrationPlaying = false;
+                playNarration = false;
+                Debug.Log("Narration completed.");
+                yield return new WaitForSeconds(2f);
+                if (!playNarration && !gameManager.narrationPlaying)
+                {
+                    HideSubtitles();
+                }
+            }
         }
 
         /// <summary>Shows a line of subtitles</summary>
@@ -80,19 +164,19 @@ namespace PyrrhicSilva.UI
         {
             float dir = audioDescTextBox.text.Length * readingSpeed;
             yield return new WaitForSeconds(dir);
-            Hide();
+            HideSubtitles();
         }
 
-        public void Show()
+        public void ShowSubtitles()
         {
             canvas.enabled = true;
             // Debug.Log("Subtitles showing."); 
         }
 
-        public void Hide()
+        public void HideSubtitles()
         {
             canvas.enabled = false;
-            subtitleTextBox.text = string.Empty;
+            // subtitleTextBox.text = string.Empty;
             // Debug.Log("Subtitles hidden"); 
         }
     }

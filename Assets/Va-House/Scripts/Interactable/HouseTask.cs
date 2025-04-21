@@ -60,11 +60,11 @@ namespace PyrrhicSilva.Interactable
                     SetMessy();
                 }
             }
-            if (queueActive && !gameManager.narrationPlaying && !gameManager.playNarration)
+            if (queueActive && !gameManager.narrationPlaying && !gameManager.subtitles.playNarration)
             {
                 if (messy)
                 {
-                    gameManager.PlayNarration(preNarration);
+                    gameManager.subtitles.PlayNarration(preNarration);
                     EnableTrigger();
                     display.enabled = true; 
                 }
@@ -94,7 +94,7 @@ namespace PyrrhicSilva.Interactable
                         // gameManager.subtitles.DisplaySubtitles(desc + " closing."); 
                     }
                     queueActive = true;
-                    gameManager.PlayNarration(postNarration);
+                    gameManager.subtitles.PlayNarration(postNarration);
                     lastTaskIndex = gameManager.taskIndex;
                     messy = false;
                     DisableTrigger(); 

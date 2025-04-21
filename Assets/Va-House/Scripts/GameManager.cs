@@ -20,10 +20,7 @@ namespace PyrrhicSilva
         [SerializeField] string[] introPodcastLines;
         [SerializeField] string[] exitHouseLines;
         [SerializeField] string[] returnLines;
-        private string[] narration;
-        private string[] narrationQueue;
-        public bool playNarration { get; private set; } = false;
-        public bool narrationPlaying { get; private set; } = false;
+        public bool narrationPlaying { get; internal set; } = false;
         internal bool subtitlesOn = true;
         [Header("Audio")]
         [SerializeField] AudioSource outdoors;
@@ -59,13 +56,7 @@ namespace PyrrhicSilva
         // Update is called once per frame
         void Update()
         {
-            if (playNarration)
-            {
-                narrationPlaying = true;
-                StartCoroutine(PlayNarrationCo());
-                Debug.Log("Narration playing.");
-                playNarration = false;
-            }
+
         }
 
         void OnInteract()
@@ -93,11 +84,11 @@ namespace PyrrhicSilva
             {
                 setTable.SetActive(false);
                 dishesQueue[1].gameObject.SetActive(false);
-                PlayNarration(gameOpeningLines);
+                subtitles.PlayNarration(gameOpeningLines);
             }
             else
             {
-                PlayNarration(returnLines);
+                subtitles.PlayNarration(returnLines);
                 if (taskIndex >= allTasks.Length)
                 {
                     podcast.UnPause();
@@ -116,7 +107,7 @@ namespace PyrrhicSilva
                 {
                     podcast.time = PlayerPrefs.GetFloat("podcast progress");
                 }
-                PlayNarration(introPodcastLines);
+                subtitles.PlayNarration(introPodcastLines);
                 podcast.Play();
             }
             NextTask();
@@ -164,58 +155,6 @@ namespace PyrrhicSilva
             return temp;
         }
 
-        /// <summary>Begins playback of multiple lines of narration.</summary>
-        public void PlayNarration(string[] narration)
-        {
-            if (narrationPlaying)
-            {
-                // queue next narration set 
-                if (narrationQueue == null)
-                {
-                    narrationQueue = narration;
-                }
-                else
-                {
-                    for (int i = 0; i < narration.Length; i++)
-                    {
-                        narrationQueue.Append(narration[i]);
-                    }
-                }
-                Debug.Log("Narration already playing.");
-            }
-            else
-            {
-                this.narration = narration;
-                playNarration = true;
-            }
-        }
-
-        protected IEnumerator PlayNarrationCo()
-        {
-            subtitles.Show();
-            for (int i = 0; i < narration.Length; i++)
-            {
-                float length = 1.5f;
-                length = (float)narration[i].Length * subtitles.readingSpeed;
-                subtitles.DisplaySubtitles(narration[i]);
-                yield return new WaitForSeconds(length);
-            }
-            if (narrationQueue != null)
-            {
-                narration = narrationQueue;
-                narrationQueue = null;
-                StartCoroutine(PlayNarrationCo());
-            }
-            else
-            {
-                narrationPlaying = false;
-                playNarration = false;
-                Debug.Log("Narration completed.");
-            }
-
-            // yield return new WaitForSeconds(2f);
-            // subtitles.Hide();
-        }
         public void CloseFrontDoor()
         {
             outdoors.Pause();
@@ -235,7 +174,7 @@ namespace PyrrhicSilva
                 Save();
             }
             narrationPlaying = false; // cuts off whatever dialogue that was playing before leaving 
-            PlayNarration(exitHouseLines);
+            subtitles.PlayNarration(exitHouseLines);
         }
 
         public void EndGame()
