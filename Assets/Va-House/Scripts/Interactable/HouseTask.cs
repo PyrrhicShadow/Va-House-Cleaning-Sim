@@ -7,9 +7,13 @@ namespace PyrrhicSilva.Interactable
 {
     public class HouseTask : Interactable
     {
-        [SerializeField] string desc;
+        [SerializeField] string _desc;
+        public string desc { get { return _desc; } private set { _desc = value; } }
+        [SerializeField] internal string[] preNarration;
+        [SerializeField] internal string[] postNarration;
         [SerializeField] internal bool messy;
         [SerializeField] internal bool chain;
+        [SerializeField] internal bool queueActive;
         [SerializeField] internal GameObject mess;
         [SerializeField] internal GameObject tidy;
         [SerializeField] AudioSource effectSource;
@@ -17,7 +21,7 @@ namespace PyrrhicSilva.Interactable
         [SerializeField] internal float animTime = 0.5f;
         [SerializeField] internal TMP_Text display;
         [SerializeField] int tasksTillReset = 3;
-        int lastTaskIndex; 
+        int lastTaskIndex;
 
         protected override void Awake()
         {
@@ -28,7 +32,7 @@ namespace PyrrhicSilva.Interactable
                 desc = "Open and close";
             }
 
-            display.enabled = false; 
+            display.enabled = false;
         }
 
         protected virtual void Start()
@@ -41,17 +45,36 @@ namespace PyrrhicSilva.Interactable
             {
                 Debug.Log(this.name + " is missing its cleaned state.");
             }
-            interactable = false; 
+            interactable = false;
             repeatable = false;
             SetMessy();
         }
 
-        protected override void Update() {
-            if (!messy && !chain) {
-                if (gameManager.taskIndex - lastTaskIndex > tasksTillReset) {
-                    messy = true; 
-                    SetMessy(); 
+        protected override void Update()
+        {
+            if (!messy && !chain)
+            {
+                if (gameManager.taskIndex - lastTaskIndex > tasksTillReset)
+                {
+                    messy = true;
+                    SetMessy();
                 }
+            }
+            if (queueActive && !gameManager.narrationPlaying && !gameManager.playNarration)
+            {
+                if (messy)
+                {
+                    gameManager.PlayNarration(preNarration);
+                    EnableTrigger();
+                    display.enabled = true; 
+                }
+                else
+                {
+                    gameManager.PlayNarration(postNarration);
+                    gameManager.TaskComplete();
+                    interactable = false;
+                }
+                queueActive = false;
             }
         }
 
@@ -62,56 +85,49 @@ namespace PyrrhicSilva.Interactable
             {
                 if (messy == false)
                 {
-
-                    // if (effects != null && effects[0] != null) { 
-                    //     effectSource.PlayOneShot(effects[0]); 
-                    //     // gameManager.subtitles.DisplayAudioDescription(desc + " opening."); 
-                    // }
                     messy = true;
                 }
                 else
                 {
 
-                    // if (effects != null && effects[1] != null) {
-                    //     effectSource.PlayOneShot(effects[1]); 
-                    //     // gameManager.subtitles.DisplaySubtitles(desc + " closing."); 
-                    // }
-                    
-                    display.enabled = false;
+                    if (effects != null && effects[0] != null) {
+                        effectSource.PlayOneShot(effects[0]); 
+                        // gameManager.subtitles.DisplaySubtitles(desc + " closing."); 
+                    }
+                    queueActive = true;
+                    lastTaskIndex = gameManager.taskIndex;
                     messy = false;
-                    lastTaskIndex = gameManager.taskIndex; 
-                    gameManager.TaskComplete();
+                    DisableTrigger(); 
                 }
-                SetMessy(); 
+                SetMessy();
             }
         }
 
         public override void EnableTrigger()
         {
             base.EnableTrigger();
-            display.enabled = true; 
+            // display.enabled = true;
         }
 
         public override void DisableTrigger()
         {
             base.DisableTrigger();
-            display.enabled = false; 
+            display.enabled = false;
         }
 
         public void ActivateTask()
         {
-            interactable = true; 
             messy = true;
-            SetMessy(); 
-            gameManager.UpdateTaskDisplay(desc); 
-            EnableTrigger(); 
+            SetMessy();
+            interactable = false;
+            // gameManager.UpdateTaskDisplay(desc); 
+            queueActive = true;
         }
 
         void SetMessy()
         {
             tidy.gameObject.SetActive(!messy);
             mess.gameObject.SetActive(messy);
-            interactable = false; 
         }
     }
 }

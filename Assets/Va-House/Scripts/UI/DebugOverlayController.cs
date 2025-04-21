@@ -10,6 +10,7 @@ namespace PyrrhicSilva
         [SerializeField] internal GameManager gameManager;
         [SerializeField] protected TMP_Text taskIndex;
         [SerializeField] protected TMP_Text dishesIndex;
+        [SerializeField] protected TMP_Text currentTask; 
 
         // Awake is called before Start 
         void Awake()
@@ -26,6 +27,8 @@ namespace PyrrhicSilva
 
             taskIndex.text = "Task index: " + gameManager.taskIndex;
             dishesIndex.text = "Dishes index: " + gameManager.dishesIndex;
+            currentTask.text = "Current task: " + gameManager.currentTask.desc; 
+            currentTask.enabled = gameManager.currentTask.interactable; 
 
         }
     }

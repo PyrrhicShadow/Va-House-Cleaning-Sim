@@ -8,7 +8,7 @@ namespace PyrrhicSilva.Interactable {
         [SerializeField] protected Collider _col; 
         [SerializeField] protected bool repeatable = false; 
         [SerializeField] protected float interactDelay = 0.5f; 
-        [SerializeField] protected bool interactable = true; 
+        [SerializeField] public bool interactable {  get; protected set; } = true; 
         private float timer = 0; 
         public Collider col { get { return _col; } protected set { _col = value; } }
 

@@ -33,18 +33,18 @@ public class OpenAndClose : Interactable {
         if (interactable) {
             if (open == false) {
                 StartCoroutine(opening());
-                // if (effects != null && effects[0] != null) { 
-                //     effectSource.PlayOneShot(effects[0]); 
-                //     // gameManager.subtitles.DisplayAudioDescription(desc + " opening."); 
-                // }
+                if (effects != null && effects[0] != null) { 
+                    effectSource.PlayOneShot(effects[0]); 
+                    // gameManager.subtitles.DisplayAudioDescription(desc + " opening."); 
+                }
             }
             else {
                 if (open == true) {
                     StartCoroutine(closing());
-                    // if (effects != null && effects[1] != null) {
-                    //     effectSource.PlayOneShot(effects[1]); 
-                    //     // gameManager.subtitles.DisplaySubtitles(desc + " closing."); 
-                    // }
+                    if (effects != null && effects[1] != null) {
+                        effectSource.PlayOneShot(effects[1]); 
+                        // gameManager.subtitles.DisplaySubtitles(desc + " closing."); 
+                    }
                 }
             }
         }

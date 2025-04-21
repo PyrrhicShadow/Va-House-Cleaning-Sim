@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using PyrrhicSilva.Interactable;
 using UnityEngine;
 using TMPro;
+using StarterAssets;
+using System.Linq;
 
 namespace PyrrhicSilva
 {
@@ -11,16 +13,27 @@ namespace PyrrhicSilva
 
         [SerializeField] Interact interact;
         [SerializeField] OpenAndClose frontDoor;
-        [SerializeField] HomeownerController homeownerController; 
+        [SerializeField] FirstPersonController character;
+        [SerializeField] internal UI.SubtitleController subtitles;
+        // [SerializeField] HomeownerController homeownerController;
+        [Header("Dialogue lines")]
+        [SerializeField] string[] gameOpeningLines;
+        [SerializeField] string[] introPodcastLines;
+        private string[] narration;
+        private string[] narrationQueue;
+        public bool playNarration { get; private set; } = false;
+        public bool narrationPlaying { get; private set; } = false;
+        internal bool subtitlesOn = true;
         [Header("Task objects")]
         [SerializeField] GameObject setTable;
         [SerializeField] HouseTask[] allTasks;
         [SerializeField] HouseTask[] dishesQueue;
         [SerializeField] int _taskIndex = 0;
-        public int taskIndex { get { return _taskIndex; } internal set { _taskIndex = value; } }
-        [SerializeField] internal int dishesIndex = 0;
-        [SerializeField] HouseTask currentTask;
-        [SerializeField] TMP_Text taskDisplay;
+        public int taskIndex { get { return _taskIndex; } private set { _taskIndex = value; } }
+        [SerializeField] int _dishesIndex = 0;
+        public int dishesIndex { get { return _dishesIndex; } private set { _dishesIndex = value; } }
+        [SerializeField] HouseTask _currentTask;
+        public HouseTask currentTask { get { return _currentTask; } private set { _currentTask = value; } }
 
         void Awake()
         {
@@ -37,26 +50,50 @@ namespace PyrrhicSilva
         // Update is called once per frame
         void Update()
         {
-
+            if (playNarration)
+            {
+                narrationPlaying = true;
+                StartCoroutine(PlayNarrationCo());
+                Debug.Log("Narration playing.");
+                playNarration = false;
+            }
         }
 
         void OnInteract()
         {
             interact.Press();
-            currentTask.ActivateTask();
+            // currentTask.ActivateTask();
         }
 
-        void StartTasks()
+        internal void PlayerMovement()
+        {
+            if (character.enabled)
+            {
+                character.enabled = false;
+            }
+            else
+            {
+                character.enabled = true;
+            }
+        }
+
+
+        public void StartTasks()
         {
             setTable.SetActive(false);
             dishesQueue[1].gameObject.SetActive(false);
             currentTask.gameObject.SetActive(true);
+            PlayNarration(gameOpeningLines);
             currentTask.ActivateTask();
         }
 
         public void TaskComplete()
         {
             taskIndex++;
+            if (taskIndex == allTasks.Length)
+            {
+                PlayNarration(introPodcastLines);
+            }
             NextTask();
         }
 
@@ -79,10 +116,11 @@ namespace PyrrhicSilva
             // find a way to prevent new task from being the same as the current task
             HouseTask temp = allTasks[Random.Range(0, allTasks.Length)];
 
-            int i = 0; 
-            while (temp.Equals(currentTask) && i < 100) {
+            int i = 0;
+            while (temp.Equals(currentTask) && i < 100)
+            {
                 temp = allTasks[Random.Range(0, allTasks.Length)];
-                i++; 
+                i++;
             }
 
             if (temp.chain)
@@ -101,15 +139,61 @@ namespace PyrrhicSilva
             return temp;
         }
 
-        public void UpdateTaskDisplay(string taskName)
+        /// <summary>Begins playback of multiple lines of narration.</summary>
+        public void PlayNarration(string[] narration)
         {
-            taskDisplay.text = "" + taskName;
+            if (narrationPlaying)
+            {
+                // queue next narration set 
+                if (narrationQueue == null)
+                {
+                    narrationQueue = narration;
+                }
+                else
+                {
+                    for (int i = 0; i < narration.Length; i++)
+                    {
+                        narrationQueue.Append(narration[i]);
+                    }
+                }
+                Debug.Log("Narration already playing.");
+            }
+            else
+            {
+                this.narration = narration;
+                subtitles.Show();
+                playNarration = true;
+            }
         }
 
+        protected IEnumerator PlayNarrationCo()
+        {
+            for (int i = 0; i < narration.Length; i++)
+            {
+                float length = 1.5f;
+                length = (float)narration[i].Length * subtitles.readingSpeed;
+                subtitles.DisplaySubtitles(narration[i]);
+                yield return new WaitForSeconds(length);
+            }
+            // subtitles.Hide();
+            if (narrationQueue != null)
+            {
+                narration = narrationQueue;
+                narrationQueue = null;
+                StartCoroutine(PlayNarrationCo());
+            }
+            else
+            {
+                narrationPlaying = false;
+                playNarration = false;
+                Debug.Log("Narration completed.");
+            }
+        }
         public void CloseFrontDoor()
         {
             frontDoor.InteractAction();
             StartTasks();
         }
+
     }
 }
