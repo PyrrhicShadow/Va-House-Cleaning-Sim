@@ -27,7 +27,8 @@ namespace PyrrhicSilva
         internal bool subtitlesOn = true;
         [Header("Audio")]
         [SerializeField] AudioSource outdoors;
-        [SerializeField] AudioSource podcast;
+        [SerializeField] AudioSource _podcast;
+        public AudioSource podcast { get { return _podcast; } private set { _podcast = value; } }
         [Header("Entering Exiting")]
         [SerializeField] ColExitInteract entering;
         [SerializeField] ColEnterInteract exiting;
@@ -185,13 +186,13 @@ namespace PyrrhicSilva
             else
             {
                 this.narration = narration;
-                subtitles.Show();
                 playNarration = true;
             }
         }
 
         protected IEnumerator PlayNarrationCo()
         {
+            subtitles.Show();
             for (int i = 0; i < narration.Length; i++)
             {
                 float length = 1.5f;
@@ -199,7 +200,6 @@ namespace PyrrhicSilva
                 subtitles.DisplaySubtitles(narration[i]);
                 yield return new WaitForSeconds(length);
             }
-            // subtitles.Hide();
             if (narrationQueue != null)
             {
                 narration = narrationQueue;
@@ -212,6 +212,9 @@ namespace PyrrhicSilva
                 playNarration = false;
                 Debug.Log("Narration completed.");
             }
+
+            // yield return new WaitForSeconds(2f);
+            // subtitles.Hide();
         }
         public void CloseFrontDoor()
         {
@@ -225,6 +228,7 @@ namespace PyrrhicSilva
         public void LeaveHouse()
         {
             outdoors.UnPause();
+            entering.EnableTrigger();
             if (podcast.isPlaying)
             {
                 podcast.Pause();
@@ -241,16 +245,19 @@ namespace PyrrhicSilva
 
         public void Save()
         {
-            float podcastProgress = 0;
-            if (podcast.isPlaying)
+            if (podcast != null)
             {
-                podcastProgress = podcast.time - 5;
-                if (podcastProgress < 0)
+                float podcastProgress = 0;
+                if (podcast.isPlaying)
                 {
-                    podcastProgress = 0;
+                    podcastProgress = podcast.time - 5;
+                    if (podcastProgress < 0)
+                    {
+                        podcastProgress = 0;
+                    }
                 }
+                PlayerPrefs.SetFloat("podcast progress", podcastProgress);
             }
-            PlayerPrefs.SetFloat("podcast progress", podcastProgress);
         }
 
         private void OnDisable()
