@@ -79,6 +79,12 @@ namespace PyrrhicSilva
             // find a way to prevent new task from being the same as the current task
             HouseTask temp = allTasks[Random.Range(0, allTasks.Length)];
 
+            int i = 0; 
+            while (temp.Equals(currentTask) && i < 100) {
+                temp = allTasks[Random.Range(0, allTasks.Length)];
+                i++; 
+            }
+
             if (temp.chain)
             {
                 if (dishesIndex > 1)
