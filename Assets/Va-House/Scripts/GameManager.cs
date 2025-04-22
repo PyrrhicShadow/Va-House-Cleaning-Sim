@@ -40,9 +40,6 @@ namespace PyrrhicSilva
         public int dishesIndex { get { return _dishesIndex; } private set { _dishesIndex = value; } }
         [SerializeField] HouseTask _currentTask;
         public HouseTask currentTask { get { return _currentTask; } private set { _currentTask = value; } }
-        [Header("Ending")]
-        [SerializeField] float creditsRunTime; 
-        [SerializeField] bool endGame = false; 
 
         void Awake()
         {
@@ -189,6 +186,7 @@ namespace PyrrhicSilva
         {
             PlayerMovement(); 
             endGameCanvas.gameObject.SetActive(true); 
+            podcast.PlayOneShot(music); 
             // Debug.Log("End game.");
         }
 

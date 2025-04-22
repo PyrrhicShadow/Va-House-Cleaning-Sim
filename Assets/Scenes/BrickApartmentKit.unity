@@ -43006,7 +43006,7 @@ GameObject:
   - component: {fileID: 1566745936}
   - component: {fileID: 1566745937}
   m_Layer: 5
-  m_Name: End Game Canvas
+  m_Name: Credits Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43150,7 +43150,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   animationTime: 1.5
   headers:
-  - 'Programming, Game Desigh, '
+  - Programming, Game Design
   - Models
   - Models (cont.)
   - Art
@@ -43161,22 +43161,22 @@ MonoBehaviour:
   - 
   bodies:
   - Pyrrhic Silva (Jake Kao)
-  - Skybox Series Free by Avionx from the Unity Asset Store \nFree 32 RPG Animations
-    by Blink from the Unity Asset Store \nApartment Kit by Brick Project Studio from
-    the Unity Asset Store Rag by GVODZY from the Unity Asset Store \nCardboard Boxes
-    with Tap by GVODZY from the Unity Asset Store
-  - Lamppost by MaxDragon from the Unity Asset Store \nDistant Lands Free Characters
-    by Distant Lands from the Unity Asset Store \nStarter Assets - First Person Character
-    Controller by Unity Technologies from the Unity Asset Store \nBooks Pack (deprecated)
-    by Vertex Studio from the Unity Asset Store \nModular Sofa FREE by Vertex Studio
+  - Skybox Series Free by Avionx from the Unity Asset Store <br>Free 32 RPG Animations
+    by Blink from the Unity Asset Store <br>Apartment Kit by Brick Project Studio
+    from the Unity Asset Store <br>Rag and Cardboard Boxes with Tap by GVODZY from
+    the Unity Asset Store <br>Lamppost by MaxDragon from the Unity Asset Store
+  - Distant Lands Free Characters by Distant Lands from the Unity Asset Store <br>Starter
+    Assets - First Person Character Controller by Unity Technologies from the Unity
+    Asset Store <br>Books Pack (deprecated) and Modular Sofa FREE by Vertex Studio
     from the Unity Asset Store
   - Additional Art by Pyrrhic Silva
-  - Button by StudioAlivioGlobal on Pixabay \ncollect by Wagna on Pixabay \nInterface
-    by StudioAlivioGlobal on Pixabay \ndoor-open-close by j-tap on Pixabay \nNight
-    Sky Sound Effect 01 by Subhasis Mandal on Pixabay \nRPG text speech sound by
-    666HeroHero on Pixabay
-  - Feminism, Wages Against Housework podcast episode by Jake Kao
-  - Mom and Dad \nMuga \nHollow Sweed \nDavey Wreden's The Beginner's Guide
+  - RPG text speech sound by 666HeroHero on Pixabay <br>door-open-close by j-tap
+    on Pixabay <br>Button and Interface by StudioAlivioGlobal on Pixabay <br>Night
+    Sky Sound Effect 01 by Subhasis Mandal on Pixabay <br>collect by Wagna on Pixabay
+  - 'Song: Somewhere In The Clouds by Keys Of Moon, Music powered by BreakingCopyright,
+    Creative Commons (BY 3.0) <br>Feminism: Wages Against Housework podcast episode
+    by Jake Kao'
+  - Mom and Dad <br>Muga <br>Hollow Sweed <br>Davey Wreden's The Beginner's Guide
   - Thank you for playing!
   - 
   textWindow: {fileID: 896794411}
@@ -49202,8 +49202,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -40}
-  m_SizeDelta: {x: 700, y: 400}
+  m_AnchoredPosition: {x: 0, y: -30}
+  m_SizeDelta: {x: 700, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1839610573
 MonoBehaviour:
@@ -49225,20 +49225,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Button by StudioAlivioGlobal on Pixabay
-
-    collect by Wagna on Pixabay
-
-    Interface
-    by StudioAlivioGlobal on Pixabay
-
-    door-open-close by j-tap on Pixabay
-
-    Night
-    Sky Sound Effect 01 by Subhasis Mandal on Pixabay
-
-    RPG text speech sound
-    by 666HeroHero on Pixabay'
+  m_text: Skybox Series Free by Avionx from the Unity Asset Store <br>Free 32 RPG
+    Animations by Blink from the Unity Asset Store <br>Apartment Kit by Brick Project
+    Studio from the Unity Asset Store <br>Rag and Cardboard Boxes with Tap by GVODZY
+    from the Unity Asset Store <br>Lamppost by MaxDragon from the Unity Asset Store
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -49277,9 +49267,9 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 50
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 200
+  m_paragraphSpacing: 150
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -60134,8 +60124,6 @@ MonoBehaviour:
   _taskIndex: 0
   _dishesIndex: 0
   _currentTask: {fileID: 0}
-  creditsRunTime: 0
-  endGame: 0
 --- !u!114 &8688322422413929991 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
