@@ -43011,7 +43011,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1566745931
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43169,7 +43169,7 @@ MonoBehaviour:
     Assets - First Person Character Controller by Unity Technologies from the Unity
     Asset Store <br>Books Pack (deprecated) and Modular Sofa FREE by Vertex Studio
     from the Unity Asset Store
-  - Additional Art by Pyrrhic Silva
+  - Crosshair Pack by Kenney Vleugels <br>Additional art by Pyrrhic Silva
   - RPG text speech sound by 666HeroHero on Pixabay <br>door-open-close by j-tap
     on Pixabay <br>Button and Interface by StudioAlivioGlobal on Pixabay <br>Night
     Sky Sound Effect 01 by Subhasis Mandal on Pixabay <br>collect by Wagna on Pixabay
@@ -50080,8 +50080,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2107097364}
-  - {fileID: 909574546}
   - {fileID: 1270855761}
+  - {fileID: 909574546}
   - {fileID: 1566745931}
   - {fileID: 1769717308}
   m_Father: {fileID: 0}
@@ -56146,7 +56146,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: af0ae2dbf3d1efb4f82af377950704a2, type: 3}
+  m_Sprite: {fileID: 1478478789, guid: 850e93cf2b806204b82da7bf075c4e50, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -37,6 +37,10 @@ Featuring a podcast by Pyrrhic Silva for your listening enjoyment.
 * Books Pack (deprecated) by [Vertex Studio](https://assetstore.unity.com/publishers/2053) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/props/interior/books-pack-5484) 
 * Modular Sofa FREE by [Vertex Studio](https://assetstore.unity.com/publishers/2053) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/props/cardboard-boxes-with-tape-305511)
 
+### Art 
+
+* Crosshair Pack by [Kenney Vleugels](https://www.Kenney.nl)
+
 ### Music 
 
 * Song: Somewhere In The Clouds by [Keys Of Moon](https://www.youtube.com/c/keysofmoonmusic), Music powered by [BreakingCopyright](https://breakingcopyright.com), [Creative Commons (BY 3.0)](https://creativecommons.org/licenses/by/3.0/)
