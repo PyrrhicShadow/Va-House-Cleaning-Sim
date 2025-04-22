@@ -4,7 +4,6 @@ using PyrrhicSilva.Interactable;
 using UnityEngine;
 using StarterAssets;
 
-
 namespace PyrrhicSilva
 {
     public class GameManager : MonoBehaviour
@@ -14,9 +13,11 @@ namespace PyrrhicSilva
         [SerializeField] OpenAndClose frontDoor;
         [SerializeField] FirstPersonController character;
         [SerializeField] internal UI.SubtitleController subtitles;
+        [SerializeField] CreditsController endGameCanvas; 
         [Header("Dialogue lines")]
         [SerializeField] string[] gameOpeningLines;
         [SerializeField] string[] introPodcastLines;
+        [SerializeField] string[] introMusicLines; 
         [SerializeField] string[] exitHouseLines;
         [SerializeField] string[] returnLines;
         public bool narrationPlaying { get; internal set; } = false;
@@ -24,6 +25,7 @@ namespace PyrrhicSilva
         [Header("Audio")]
         [SerializeField] AudioSource outdoors;
         [SerializeField] AudioSource _podcast;
+        [SerializeField] AudioClip music; 
         public AudioSource podcast { get { return _podcast; } private set { _podcast = value; } }
         [Header("Entering Exiting")]
         [SerializeField] ColExitInteract entering;
@@ -38,10 +40,14 @@ namespace PyrrhicSilva
         public int dishesIndex { get { return _dishesIndex; } private set { _dishesIndex = value; } }
         [SerializeField] HouseTask _currentTask;
         public HouseTask currentTask { get { return _currentTask; } private set { _currentTask = value; } }
+        [Header("Ending")]
+        [SerializeField] float creditsRunTime; 
+        [SerializeField] bool endGame = false; 
 
         void Awake()
         {
             currentTask = allTasks[0];
+            endGameCanvas.gameObject.SetActive(false); 
             Load();
         }
 
@@ -118,6 +124,12 @@ namespace PyrrhicSilva
             else
             {
                 currentTask = RandomTask();
+                if (!podcast.isPlaying) {
+                    subtitles.PlayNarration(introMusicLines);
+                    podcast.clip = music;
+                    podcast.loop = true; 
+                    podcast.PlayDelayed(2f); 
+                }
             }
             currentTask.gameObject.SetActive(true);
             currentTask.ActivateTask();
@@ -175,7 +187,9 @@ namespace PyrrhicSilva
 
         public void EndGame()
         {
-            Debug.Log("End game.");
+            PlayerMovement(); 
+            endGameCanvas.gameObject.SetActive(true); 
+            // Debug.Log("End game.");
         }
 
         public void Save()

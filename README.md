@@ -23,6 +23,8 @@ Featuring a podcast by Pyrrhic Silva for your listening enjoyment.
 
 ## Credits 
 
+### Assets 
+
 * Skybox Series Free by [Avionx](https://assetstore.unity.com/publishers/31837) from the [Unity Asset Store](https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633)
 * Free 32 RPG Animations by [Blink](https://assetstore.unity.com/publishers/49855) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/animations/free-32-rpg-animations-215058)
 * Apartment Kit by [Brick Project Studio](https://assetstore.unity.com/publishers/32000) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/apartment-kit-124055) 
@@ -34,6 +36,11 @@ Featuring a podcast by Pyrrhic Silva for your listening enjoyment.
 * Starter Assets - First Person Character Controller by [Unity Technologies](https://assetstore.unity.com/publishers/1) from the [Unity Asset Store](https://assetstore.unity.com/packages/essentials/starter-assets-first-person-character-controller-196525)
 * Books Pack (deprecated) by [Vertex Studio](https://assetstore.unity.com/publishers/2053) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/props/interior/books-pack-5484) 
 * Modular Sofa FREE by [Vertex Studio](https://assetstore.unity.com/publishers/2053) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/props/cardboard-boxes-with-tape-305511)
+
+### Music 
+
+* Song: Somewhere In The Clouds by [Keys Of Moon](https://www.youtube.com/c/keysofmoonmusic), Music powered by [BreakingCopyright](https://breakingcopyright.com), [Creative Commons (BY 3.0)](https://creativecommons.org/licenses/by/3.0/)
+
 
 ### Sounds 
 

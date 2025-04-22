@@ -135,10 +135,22 @@ namespace PyrrhicSilva.UI
             for (int i = 0; i < narration.Length; i++)
             {
                 ShowSubtitles();
-                dialogueSounds.Play(); 
-                float length = (float)narration[i].Length * readingSpeed;
+                // dialogueSounds.Play(); 
+                // float length = (float)narration[i].Length * readingSpeed;
+                // DisplaySubtitles(narration[i]);
+                // yield return new WaitForSeconds(length); 
+
+                for (int j = 0; j < narration[i].Length; j++)
+                {
+                    if (j % 2 == 0)
+                    {
+                        dialogueSounds.Play();
+                    }
+                    DisplaySubtitles(narration[i][..j]);
+                    yield return new WaitForSeconds(readingSpeed);
+                }
                 DisplaySubtitles(narration[i]);
-                yield return new WaitForSeconds(length); 
+                yield return new WaitForSeconds(readingSpeed * 25);
             }
             if (narrationQueue != null)
             {
@@ -154,7 +166,7 @@ namespace PyrrhicSilva.UI
                 yield return new WaitForSeconds(2f);
                 if (!playNarration && !gameManager.narrationPlaying)
                 {
-                    narrationQueue = null; 
+                    narrationQueue = null;
                     HideSubtitles();
                 }
             }
