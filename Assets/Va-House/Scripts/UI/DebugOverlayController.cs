@@ -11,8 +11,9 @@ namespace PyrrhicSilva
         [SerializeField] internal GameManager gameManager;
         [SerializeField] protected TMP_Text taskIndex;
         [SerializeField] protected TMP_Text dishesIndex;
-        [SerializeField] protected TMP_Text currentTask; 
-        [SerializeField] protected TMP_Text podcastProgress; 
+        [SerializeField] protected TMP_Text currentTask;
+        [SerializeField] protected TMP_Text podcastProgress;
+        private float time;
 
         // Awake is called before Start 
         void Awake()
@@ -22,6 +23,10 @@ namespace PyrrhicSilva
                 gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
             }
         }
+        void Start()
+        {
+            time = gameManager.podcast.time;
+        } 
 
         // Update is called once per frame
         void Update()
@@ -29,13 +34,13 @@ namespace PyrrhicSilva
 
             taskIndex.text = "Task index: " + gameManager.taskIndex;
             dishesIndex.text = "Dishes index: " + gameManager.dishesIndex;
-            currentTask.text = "Current task: " + gameManager.currentTask.desc; 
-            currentTask.enabled = gameManager.currentTask.interactable; 
-            podcastProgress.enabled = gameManager.podcast.isPlaying;
-            if (gameManager.podcast.isPlaying) { 
-                float time = gameManager.podcast.time; 
-                podcastProgress.text = "Podcast progress: " + Math.Floor(time / 60) + ":" + time % 60; 
+            currentTask.text = "Current task: " + gameManager.currentTask.desc;
+            currentTask.enabled = gameManager.currentTask.interactable;
+            if (gameManager.podcast.isPlaying)
+            {
+                time = gameManager.podcast.time;
             }
+            podcastProgress.text = "Podcast progress: 0:" + Math.Floor(time / 60).ToString("00") + ":" + Math.Floor(time % 60).ToString("00");
 
         }
     }

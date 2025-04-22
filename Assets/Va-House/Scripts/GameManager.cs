@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using PyrrhicSilva.Interactable;
 using UnityEngine;
-using TMPro;
 using StarterAssets;
-using System.Linq;
+
 
 namespace PyrrhicSilva
 {
@@ -43,6 +42,7 @@ namespace PyrrhicSilva
         void Awake()
         {
             currentTask = allTasks[0];
+            Load();
         }
 
 
@@ -103,12 +103,8 @@ namespace PyrrhicSilva
             taskIndex++;
             if (taskIndex == allTasks.Length)
             {
-                if (PlayerPrefs.HasKey("podcast progress"))
-                {
-                    podcast.time = PlayerPrefs.GetFloat("podcast progress");
-                }
                 subtitles.PlayNarration(introPodcastLines);
-                podcast.Play();
+                podcast.UnPause(); 
             }
             NextTask();
         }
@@ -173,7 +169,7 @@ namespace PyrrhicSilva
                 podcast.Pause();
                 Save();
             }
-            
+
             subtitles.PlayNarration(exitHouseLines, false); // cuts off whatever dialogue that was playing before leaving 
         }
 
@@ -186,17 +182,23 @@ namespace PyrrhicSilva
         {
             if (podcast != null)
             {
-                float podcastProgress = 0;
-                if (podcast.isPlaying)
+                float podcastProgress = podcast.time - 5;
+                if (podcastProgress < 0)
                 {
-                    podcastProgress = podcast.time - 5;
-                    if (podcastProgress < 0)
-                    {
-                        podcastProgress = 0;
-                    }
+                    podcastProgress = 0;
                 }
                 PlayerPrefs.SetFloat("podcast progress", podcastProgress);
             }
+        }
+
+        public void Load()
+        {
+            podcast.Play(); 
+            if (PlayerPrefs.HasKey("podcast progress"))
+            {
+                podcast.time = PlayerPrefs.GetFloat("podcast progress");
+            }
+            podcast.Pause(); 
         }
 
         private void OnDisable()

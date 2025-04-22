@@ -94,11 +94,11 @@ namespace PyrrhicSilva.UI
 
         /// <summary>Begins playback of multiple lines of narration.</summary>
         /// <param name="narration">Lines to play</param>
-        /// <param name="clip">Speech sound</param>
+        // /// <param name="clip">Speech sound</param>
         /// <param name="queue">True to add to queue, false to cut off previously playing dialogue</param>
         public void PlayNarration(string[] narration, AudioClip clip, bool queue)
         {
-            if (queue && gameManager.narrationPlaying)
+            if (/* queue && */ gameManager.narrationPlaying)
             {
                 // queue next narration set 
                 if (narrationQueue == null)
@@ -132,20 +132,13 @@ namespace PyrrhicSilva.UI
 
         protected IEnumerator PlayNarrationCo()
         {
-            int soundGap = 3;
-            ShowSubtitles();
             for (int i = 0; i < narration.Length; i++)
             {
-                if (i % soundGap == 0 && i < narration.Length - soundGap)
-                {
-                    dialogueSounds.Play();
-                }
-                float length = 1.5f;
-                length = (float)narration[i].Length * readingSpeed;
-                DisplaySubtitles(narration[i]);
-                yield return new WaitForSeconds(length);
                 ShowSubtitles();
-                dialogueSounds.Stop();
+                dialogueSounds.Play(); 
+                float length = (float)narration[i].Length * readingSpeed;
+                DisplaySubtitles(narration[i]);
+                yield return new WaitForSeconds(length); 
             }
             if (narrationQueue != null)
             {
@@ -161,6 +154,7 @@ namespace PyrrhicSilva.UI
                 yield return new WaitForSeconds(2f);
                 if (!playNarration && !gameManager.narrationPlaying)
                 {
+                    narrationQueue = null; 
                     HideSubtitles();
                 }
             }

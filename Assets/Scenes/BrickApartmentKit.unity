@@ -1551,7 +1551,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 20, y: -20}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 600, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &39998235
 MonoBehaviour:
@@ -35452,6 +35452,7 @@ MonoBehaviour:
   readingSpeed: 0.07
   gameManager: {fileID: 8688322422413929988}
   dialogueSounds: {fileID: 1270855766}
+  defaultDialogueClip: {fileID: 8300000, guid: 2d6df0d3715897940abdea3cc63075db, type: 3}
 --- !u!114 &1270855763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35527,9 +35528,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 7252358281259384823, guid: 63751c7a6bc0dab4a87f3a50007c8f1c, type: 2}
   m_audioClip: {fileID: 8300000, guid: 2d6df0d3715897940abdea3cc63075db, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.65
-  m_Pitch: 1
-  Loop: 1
+  m_Volume: 0.32
+  m_Pitch: 2.08
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -59469,8 +59470,9 @@ MonoBehaviour:
   - Well, the place isn't going to clean itself.
   - I'm gonna get started over here. Why don't you join me?
   introPodcastLines:
-  - Here, I've put on a podcast for us to listen to while we work.
-  - Isn't it relaxing to have something playing in the background while doing chores?
+  - Here, let me put on a podcast for us to listen to.
+  - Isn't it relaxing to have something playing in the background while we work?
+  - Anyhow, let's get back to it.
   exitHouseLines:
   - You're free to come and go as you please.
   - Just remember to stay warm out there.
