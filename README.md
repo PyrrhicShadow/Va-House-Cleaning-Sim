@@ -23,6 +23,10 @@ Featuring a podcast by Pyrrhic Silva for your listening enjoyment.
 
 ## Credits 
 
+### Additional Programming 
+
+* Billboards by [John French](https://gamedevbeginner.com/author/john/) on [Game Dev Beginner](https://gamedevbeginner.com/billboards-in-unity-and-how-to-make-your-own/)
+
 ### Assets 
 
 * Skybox Series Free by [Avionx](https://assetstore.unity.com/publishers/31837) from the [Unity Asset Store](https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633)
