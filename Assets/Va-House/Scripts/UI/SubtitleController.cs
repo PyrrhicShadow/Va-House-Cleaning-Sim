@@ -167,7 +167,10 @@ namespace PyrrhicSilva.UI
                 if (!playNarration && !gameManager.narrationPlaying)
                 {
                     narrationQueue = null;
-                    HideSubtitles();
+                    if (!gameManager.subtitlesOn)
+                    {
+                        HideSubtitles();
+                    }
                 }
             }
         }

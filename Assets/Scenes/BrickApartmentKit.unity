@@ -10369,8 +10369,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 800, y: 150}
+  m_AnchoredPosition: {x: 0, y: 100}
+  m_SizeDelta: {x: 720, y: 80}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1001 &389032749
 PrefabInstance:
@@ -13368,8 +13368,7 @@ MonoBehaviour:
   - Last I checked, the tub needed a cleaning.
   - How about you scrub it down the best you can?
   postNarration:
-  - That's more than enough. Thank you.
-  - No need to be perfect, we're all just human.
+  - 'That''s more than enough. No need to be perfect, we''re all just human. '
   messy: 0
   chain: 0
   queueActive: 0
@@ -22148,7 +22147,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Hello there. Thank you for playing Housecleaning Sim. '
+  m_text: "Jake (they/them): Federici seems to be pushing for a radical, political,
+    and systematic change of how housework and women\u2019s labor is viewed. <br>That\u2019s
+    a really daunting project and I\u2019m not like a super social person so I don\u2019t
+    feel like I have the skillset required to contribute to her project in any meaningful
+    way,"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22175,21 +22178,21 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 24
+  m_lineSpacing: 0
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 24
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -22237,13 +22240,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1270855761}
+  m_Father: {fileID: 1884285292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -160}
-  m_SizeDelta: {x: 720, y: 120}
-  m_Pivot: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 120}
+  m_SizeDelta: {x: 800, y: 120}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!1001 &840168388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23784,7 +23787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &909574546
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26349,6 +26352,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5583127475428444968, guid: 8dfa0d45cd834394f8c62eec3b88c8c4, type: 3}
   m_PrefabInstance: {fileID: 1000109153}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1001222820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1001222821}
+  - component: {fileID: 1001222823}
+  - component: {fileID: 1001222822}
+  m_Layer: 5
+  m_Name: Panel (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1001222821
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001222820}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1270855761}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 100}
+  m_SizeDelta: {x: 800, y: 100}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1001222822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001222820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.35686275}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1001222823
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001222820}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1002224983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35848,7 +35926,7 @@ RectTransform:
   m_Children:
   - {fileID: 387867743}
   - {fileID: 1915818212}
-  - {fileID: 839732154}
+  - {fileID: 1001222821}
   m_Father: {fileID: 1884285292}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -47150,7 +47228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1769717308
 RectTransform:
   m_ObjectHideFlags: 0
@@ -49545,6 +49623,134 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.025914459, y: 0.1408771, z: 0.21495827}
   m_Center: {x: 0, y: 0.00000013783574, z: 0}
+--- !u!1 &1848182490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1848182492}
+  - component: {fileID: 1848182491}
+  m_Layer: 0
+  m_Name: Music player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1848182491
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848182490}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -632651723251485753, guid: 63751c7a6bc0dab4a87f3a50007c8f1c, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 6591d07bd28da7f48975b6ad3dd5ce93, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1848182492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848182490}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1848329608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50216,6 +50422,7 @@ RectTransform:
   m_Children:
   - {fileID: 2107097364}
   - {fileID: 1270855761}
+  - {fileID: 839732154}
   - {fileID: 909574546}
   - {fileID: 1566745931}
   - {fileID: 1769717308}
@@ -50304,7 +50511,7 @@ MonoBehaviour:
   - Oh dear, looks like someone spilled a drink over by the couch.
   - Could you help me out and mop that up?
   postNarration:
-  - Thank you. Wouldn't want that soaking in and staining the table.
+  - Thank you.
   messy: 1
   chain: 0
   queueActive: 0
@@ -51369,8 +51576,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 720, y: 120}
+  m_AnchoredPosition: {x: 0, y: 100}
+  m_SizeDelta: {x: 720, y: 80}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1915818213
 MonoBehaviour:
@@ -51419,15 +51626,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -51729,6 +51936,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1929092682}
+  - component: {fileID: 1929092683}
   - component: {fileID: 1929092681}
   m_Layer: 0
   m_Name: Podcast player
@@ -51848,6 +52056,330 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1929092683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929092680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d6c323e4bff59842af71bb19fe53820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  showSubtitles: 0
+  subtitleText: {fileID: 839732152}
+  _audioSource: {fileID: 1929092681}
+  subtitles:
+  - timeIndex: 0
+    speakerName: Jake (they/them)
+    subtitle: For my final project this fall 2024
+  - timeIndex: 4
+    speakerName: J
+    subtitle: I will be presenting a miniproject based on Silvia Federici's \"Wages
+      Against Housework.\"
+  - timeIndex: 10
+    speakerName: J
+    subtitle: "Federici seems to be pushing for a radical, political, and systematic
+      change for how housework and women\u2019s labor is viewed."
+  - timeIndex: 18
+    speakerName: J
+    subtitle: "That\u2019s a really daunting project and I\u2019m not like a super
+      social person so I don\u2019t feel like I have the skillset required to contribute
+      to her project in any meaningful way,"
+  - timeIndex: 28
+    speakerName: J
+    subtitle: "but at the same time, I don\u2019t want to sit around and wait for
+      other people to enact social change and solve social problems."
+  - timeIndex: 37
+    speakerName: J
+    subtitle: For this podcast, I want to explore some things that people can do
+      in their individual households
+  - timeIndex: 43
+    speakerName: J
+    subtitle: "and within small communities to compliment the larger ideas in Federici\u2019s
+      social project,"
+  - timeIndex: 50
+    speakerName: J
+    subtitle: "you know, even if we\u2019re not able to contribute in the big and
+      grand ways."
+  - timeIndex: 55
+    speakerName: J
+    subtitle: Joining me as a special guest is Patty, a fellow classmate in Philosophy
+      and Feminism this fall.
+  - timeIndex: 62
+    speakerName: Patty (she/her)
+    subtitle: That's a great question to ask because this is something I think about
+      a lot myself because yeah, I read a lot of things about like
+  - timeIndex: 71
+    speakerName: P
+    subtitle: social justice and social change, things that I'm so on board with.
+  - timeIndex: 75
+    speakerName: P
+    subtitle: But a lot of these things, they feel big and grand. And I don't know
+      what I can do
+  - timeIndex: 81
+    speakerName: 
+    subtitle: to actually help in any of these things, you know,
+  - timeIndex: 84
+    speakerName: J
+    subtitle: Right.
+  - timeIndex: 86
+    speakerName: P
+    subtitle: with unpaid labor, it's difficult, because it's like a lot of the things
+      are perhaps,
+  - timeIndex: 97
+    speakerName: P
+    subtitle: you know, maybe paying more attention to like local elections and things
+      like that may be helpful.
+  - timeIndex: 104
+    speakerName: P
+    subtitle: But a lot of change can happen, but it's slow change and it's not always
+      evident.
+  - timeIndex: 111
+    speakerName: P
+    subtitle: But just in our interpersonal relationships.
+  - timeIndex: 113
+    speakerName: P
+    subtitle: I guess learning like learning how to communicate and listen like a
+      little bit better perhaps,
+  - timeIndex: 117
+    speakerName: P
+    subtitle: learning to like stand up for ourselves and not stay in positions like
+  - timeIndex: 121
+    speakerName: P
+    subtitle: "that are\u2026 subjectifying us."
+  - timeIndex: 124
+    speakerName: J
+    subtitle: Right
+  - timeIndex: 125
+    speakerName: P
+    subtitle: I mean, as Federici points out too, it's like, this work is often
+  - timeIndex: 130
+    speakerName: P
+    subtitle: based on coercion, right?
+  - timeIndex: 132
+    speakerName: J
+    subtitle: "Right, and there\u2019s like this whole system of coercion instilled
+      from like"
+  - timeIndex: 137
+    speakerName: J
+    subtitle: basically the time you were born, and everyone around you in complicit
+      in this coercion,
+  - timeIndex: 144
+    speakerName: J
+    subtitle: "regardless of if they\u2019re a man, a woman, or otherwise."
+  - timeIndex: 148
+    speakerName: J
+    subtitle: and I think a not-insignificant part of this is
+  - timeIndex: 152
+    speakerName: J
+    subtitle: "women telling each other that if you don\u2019t keep a clean household,
+      that reflects poorly on you and stuff like that."
+  - timeIndex: 158
+    speakerName: P
+    subtitle: Women judging each other!
+  - timeIndex: 161
+    speakerName: J
+    subtitle: And there was this philosopher, from the 1600 and 1700s, Mary Astell,
+      who like wrote about feminism,
+  - timeIndex: 171
+    speakerName: J
+    subtitle: and one of the things that she talked about was how
+  - timeIndex: 174
+    speakerName: J
+    subtitle: "women who weren\u2019t clued-in on it perpetuated sexist standards
+      in their lives."
+  - timeIndex: 180
+    speakerName: P
+    subtitle: Yeah, absolutely. Well, and I mean, I think with a lot of topics that
+      we've talked about in feminism
+  - timeIndex: 185
+    speakerName: P
+    subtitle: this semester, it's a lot of like it's a lot of kind of having to do
+      a lot of internal work, on your own,
+  - timeIndex: 192
+    speakerName: P
+    subtitle: and then go out and live in a society that is very much
+  - timeIndex: 197
+    speakerName: P
+    subtitle: not interested in doing the same type of internal work
+  - timeIndex: 201
+    speakerName: P
+    subtitle: and then continuing these oppressive structures,
+  - timeIndex: 205
+    speakerName: P
+    subtitle: and lie, it's so hard to like not just get sucked back into that
+  - timeIndex: 210
+    speakerName: J
+    subtitle: because it's like, what do you do?
+  - timeIndex: 110
+    speakerName: J
+    subtitle: A point that Federici makes in her piece is how people who exist in
+      a communal living structure, outside a nuclear family, or in queer relationships
+  - timeIndex: 115
+    speakerName: J
+    subtitle: can temporarily escape some of the trappings of the traditional nuclear
+      family of a husband going to work
+  - timeIndex: 120
+    speakerName: J
+    subtitle: and a wife doing all the housework regardless of if they also have
+      a job outside the home.
+  - timeIndex: 125
+    speakerName: J
+    subtitle: I think something that we can learn from these other ways of living
+      is how they make the invisible visible in what people consider the standard
+      way to do things.
+  - timeIndex: 130
+    speakerName: J
+    subtitle: People tend to fall into the rhythms of their childhood, and it takes
+      a shift in perspective in order for people to stop perpetuating the ideas of
+      their childhood.
+  - timeIndex: 135
+    speakerName: J
+    subtitle: Situations like communal living and queer families bring to light just
+      how much labor is required to maintain a household, right?
+  - timeIndex: 140
+    speakerName: J
+    subtitle: You know, somebody has to do the dishes, somebody has to vacuum. It's
+      not like we can just sweep that under the rug.
+  - timeIndex: 145
+    speakerName: J
+    subtitle: And I feel like a lot of times when we say, oh, when women get jobs,
+      you have two income households, then you just kind of forget that there's housework
+      that still needs to be done.
+  - timeIndex: 150
+    speakerName: J
+    subtitle: There needs to be communication about who does what.
+  - timeIndex: 155
+    speakerName: J
+    subtitle: "In Maria Lugones\u2019s piece about \\\u201Cworld\\\u201D-traveling
+      to other people\u2019s internal worlds, and how being raised within a certain
+      culture makes certain mindsets feel \\\u201Cnatural,\\\u201D and it took a
+      change,"
+  - timeIndex: 160
+    speakerName: J
+    subtitle: "in her case, immigration to the US, for her to realize that those
+      viewpoints weren\u2019t natural and other viewpoints can exist."
+  - timeIndex: 165
+    speakerName: P
+    subtitle: I really like that you brought up the Lugones piece because of like
+      her reaction to her mother being a caregiver and fulfilling that role,
+  - timeIndex: 170
+    speakerName: P
+    subtitle: kind of, and her distaste for that, not wanting to be that and I definitely
+      identified with that.
+  - timeIndex: 175
+    speakerName: P
+    subtitle: You know, my mom was a homemaker and it was just like, I just, I can't
+      be that. I can't be that, you know?
+  - timeIndex: 180
+    speakerName: P
+    subtitle: Because I wanted to be my own person, her whole being was erased.
+  - timeIndex: 183
+    speakerName: J
+    subtitle: Yeah.
+  - timeIndex: 185
+    speakerName: P
+    subtitle: With regard to like with a kind of divvying up household responsibilities
+      I think, like, you know,
+  - timeIndex: 190
+    speakerName: P
+    subtitle: my dad would classically, he would always be like, oh, you know, ask
+      my mom if she needed help and then, you know, not help him himself, but like
+      enlist us,
+  - timeIndex: 195
+    speakerName: P
+    subtitle: rather, you know, and then just sit around, still. So, it's just like
+      extensions of like his kingdom, you know what I mean?
+  - timeIndex: 200
+    speakerName: P
+    subtitle: P:So it's like challenging that narrative by like making sure everyone
+      is engaged.
+  - timeIndex: 204
+    speakerName: J
+    subtitle: Exactly.
+  - timeIndex: 210
+    speakerName: P
+    subtitle: 'P: But part of that is like picking the right partners, right?'
+  - timeIndex: 220
+    speakerName: J
+    subtitle: Right.
+  - timeIndex: 230
+    speakerName: J
+    subtitle: Federici puts this strong emphasis on wages and putting monetary value
+      to housework, especially in her COVID-19-era piece.
+  - timeIndex: 240
+    speakerName: J
+    subtitle: "And I\u2019ve been musing about my current living situation and how
+      we divvy up household tasks."
+  - timeIndex: 250
+    speakerName: J
+    subtitle: "I live in a queer household. It\u2019s communal, we\u2019re college
+      students. I was thinking about how we had structured our housework division,"
+  - timeIndex: 260
+    speakerName: J
+    subtitle: "and mixing it with Federici\u2019s monetary value idea. Even though
+      there might not be money that can be spared because budgets are tight, inflation
+      is insane,"
+  - timeIndex: 270
+    speakerName: J
+    subtitle: "and a household alone can\u2019t sway the government to start paying
+      for housework, we can still apply a theoretical monetary value to household
+      work"
+  - timeIndex: 280
+    speakerName: J
+    subtitle: and that makes things visible, makes labor visible.
+  - timeIndex: 290
+    speakerName: J
+    subtitle: Now, I can say I spent 20 minutes vacuuming the house this week, and
+      someone else can say they spent 20 minutes cleaning up the bathroom.
+  - timeIndex: 300
+    speakerName: J
+    subtitle: Reframing this as work with pay comes with conventions like mandatory
+      breaks and doing other tasks that are for your relaxation and not just spend
+      all your time on housework.
+  - timeIndex: 310
+    speakerName: J
+    subtitle: Even without real money, we can still, between partners and household
+      members, make the work they do visible and more fair.
+  - timeIndex: 320
+    speakerName: P
+    subtitle: Right.
+  - timeIndex: 330
+    speakerName: J
+    subtitle: "Obviously, this requires a lot of communication, which\u2026"
+  - timeIndex: 340
+    speakerName: P
+    subtitle: Yeah, no, I absolutely agree. I mean, the thing is like, how do you
+      put, how can you put a value on unpaid labor like to start.
+  - timeIndex: 350
+    speakerName: P
+    subtitle: Maybe there's a formula, there's people that are much smarter than
+      me that they could probably figure this out, but I think a step in the right
+      direction is doing what you're saying, right?
+  - timeIndex: 360
+    speakerName: P
+    subtitle: "It\u2019s like, in these interpersonal relationships, like having
+      respect for one another, having respect for one another's time,"
+  - timeIndex: 370
+    speakerName: P
+    subtitle: and putting in the same amount of effort, right?
+  - timeIndex: 380
+    speakerName: P
+    subtitle: And like weighing that out however it feels fair to that community.
+      That's the right way forward, regardless if we can figure out the unpaid labor
+      part in a government structure.
+  - timeIndex: 390
+    speakerName: P
+    subtitle: I think that part is just like making sure people have resources so
+      that they're not able to be like, so they're not coercible, right?
+  - timeIndex: 400
+    speakerName: J
+    subtitle: "Right, like empower people to be able to negotiate with their partners
+      about who\u2019s responsible for what in the household."
 --- !u!1001 &1938973719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56463,7 +56995,7 @@ MonoBehaviour:
   - Would you straighten out the pillows on the couch out here?
   postNarration:
   - That looks real nice, doesn't it?
-  messy: 0
+  messy: 1
   chain: 0
   queueActive: 0
   mess: {fileID: 1142508384}
@@ -60238,9 +60770,10 @@ MonoBehaviour:
   returnLines:
   - Welcome back!
   - Are you ready to tidy up some more?
+  _subtitlesOn: 0
   outdoors: {fileID: 1047590254}
-  _podcast: {fileID: 1929092681}
-  music: {fileID: 0}
+  _podcast: {fileID: 1929092683}
+  music: {fileID: 1848182491}
   entering: {fileID: 206092093}
   exiting: {fileID: 795502271}
   setTable: {fileID: 2093179227}
@@ -60430,3 +60963,4 @@ SceneRoots:
   - {fileID: 1929092682}
   - {fileID: 795502276}
   - {fileID: 1047590255}
+  - {fileID: 1848182492}

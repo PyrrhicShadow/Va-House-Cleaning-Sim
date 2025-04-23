@@ -17,11 +17,12 @@ namespace PyrrhicSilva.UI
 
     public class SyncedSubtitleController : MonoBehaviour
     {
-        public bool showSubtitles = false;
+        [SerializeField] GameManager gameManager;
+        [SerializeField] bool showSubtitles = false;
         [SerializeField] TMP_Text subtitleText;
+        [SerializeField] AudioSource _audioSource;
         [SerializeField] List<SubtitleEntry> subtitles = new List<SubtitleEntry>();
-        private int currentSubtitleIndex = -1;
-        private AudioSource _audioSource;
+        private int currentSubtitleIndex = 0;
         public AudioSource audioSource { get { return _audioSource; } private set { _audioSource = value; } }
         public bool isPlaying { get { return _audioSource.isPlaying; } }
         public float time { get { return _audioSource.time; } set { _audioSource.time = value; } }
@@ -29,17 +30,19 @@ namespace PyrrhicSilva.UI
         void Start()
         {
             subtitleText.gameObject.SetActive(false);
-            audioSource = gameObject.GetComponent<AudioSource>();
             if (audioSource == null)
             {
-                this.gameObject.SetActive(false);
+                audioSource = gameObject.GetComponent<AudioSource>();
+            }
+            if (gameManager == null)
+            {
+                gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
             }
         }
 
         void Update()
         {
-
-            if (isPlaying && currentSubtitleIndex < subtitles.Count)
+            if (isPlaying && currentSubtitleIndex + 1 < subtitles.Count)
             {
                 StartCoroutine(PlaySubtitlesCo());
             }
@@ -52,7 +55,7 @@ namespace PyrrhicSilva.UI
         public void Play()
         {
             audioSource.Play();
-            currentSubtitleIndex = -1;
+            currentSubtitleIndex = 0;
         }
 
         public void Pause()
@@ -68,7 +71,10 @@ namespace PyrrhicSilva.UI
                 {
                     currentSubtitleIndex++;
                 }
-                currentSubtitleIndex--;
+                if (currentSubtitleIndex != 0)
+                {
+                    currentSubtitleIndex--;
+                }
             }
             audioSource.UnPause();
 
@@ -81,15 +87,20 @@ namespace PyrrhicSilva.UI
                 currentSubtitleIndex++;
                 DisplaySubtitle();
             }
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(0.1f);
         }
 
         public void DisplaySubtitle()
         {
             if (!string.IsNullOrEmpty(subtitles[currentSubtitleIndex].speakerName))
             {
-                if (currentSubtitleIndex > 0) {
+                if (currentSubtitleIndex > 0)
+                {
                     subtitleText.text = $"{subtitles[currentSubtitleIndex - 1].speakerName}: {subtitles[currentSubtitleIndex - 1].subtitle}<br>";
+                }
+                else
+                {
+                    subtitleText.text = string.Empty;
                 }
                 subtitleText.text += $"{subtitles[currentSubtitleIndex].speakerName}: {subtitles[currentSubtitleIndex].subtitle}";
             }
@@ -97,7 +108,7 @@ namespace PyrrhicSilva.UI
             {
                 subtitleText.text = subtitles[currentSubtitleIndex].subtitle;
             }
-            subtitleText.gameObject.SetActive(true);
+            subtitleText.gameObject.SetActive(gameManager.subtitlesOn);
         }
 
         public void HideSubtitle()
@@ -107,7 +118,7 @@ namespace PyrrhicSilva.UI
 
         public void LoadSubtitlesFromFile(string filePath)
         {
-            subtitles = new List<SubtitleEntry>(); 
+            subtitles = new List<SubtitleEntry>();
 
             string[] lines = File.ReadAllLines(filePath);
             string timePart = "";

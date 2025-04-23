@@ -14,19 +14,20 @@ namespace PyrrhicSilva
         [SerializeField] OpenAndClose frontDoor;
         [SerializeField] FirstPersonController character;
         [SerializeField] internal UI.SubtitleController subtitles;
-        [SerializeField] CreditsController endGameCanvas; 
+        [SerializeField] CreditsController endGameCanvas;
         [Header("Dialogue lines")]
         [SerializeField] string[] gameOpeningLines;
         [SerializeField] string[] introPodcastLines;
-        [SerializeField] string[] introMusicLines; 
+        [SerializeField] string[] introMusicLines;
         [SerializeField] string[] exitHouseLines;
         [SerializeField] string[] returnLines;
         public bool narrationPlaying { get; internal set; } = false;
-        internal bool subtitlesOn = true;
+        [SerializeField] bool _subtitlesOn = true;
+        public bool subtitlesOn { get { return _subtitlesOn; } internal set { _subtitlesOn = value; } }
         [Header("Audio")]
         [SerializeField] AudioSource outdoors;
         [SerializeField] SyncedSubtitleController _podcast;
-        [SerializeField] AudioSource music; 
+        [SerializeField] AudioSource music;
         public SyncedSubtitleController podcast { get { return _podcast; } private set { _podcast = value; } }
         [Header("Entering Exiting")]
         [SerializeField] ColExitInteract entering;
@@ -45,7 +46,7 @@ namespace PyrrhicSilva
         void Awake()
         {
             currentTask = allTasks[0];
-            endGameCanvas.gameObject.SetActive(false); 
+            endGameCanvas.gameObject.SetActive(false);
             Load();
         }
 
@@ -108,7 +109,7 @@ namespace PyrrhicSilva
             if (taskIndex == allTasks.Length)
             {
                 subtitles.PlayNarration(introPodcastLines);
-                podcast.UnPause(); 
+                podcast.UnPause();
             }
             NextTask();
         }
@@ -122,9 +123,10 @@ namespace PyrrhicSilva
             else
             {
                 currentTask = RandomTask();
-                if (!podcast.isPlaying) {
+                if (!podcast.isPlaying && !music.isPlaying)
+                {
                     subtitles.PlayNarration(introMusicLines);
-                    music.PlayDelayed(2f); 
+                    music.PlayDelayed(4f);
                 }
             }
             currentTask.gameObject.SetActive(true);
@@ -177,8 +179,9 @@ namespace PyrrhicSilva
                 podcast.Pause();
                 Save();
             }
-            else if (music.isPlaying) {
-                music.Pause(); 
+            else if (music.isPlaying)
+            {
+                music.Pause();
             }
 
             subtitles.PlayNarration(exitHouseLines, false); // cuts off whatever dialogue that was playing before leaving 
@@ -186,9 +189,9 @@ namespace PyrrhicSilva
 
         public void EndGame()
         {
-            PlayerMovement(); 
-            endGameCanvas.gameObject.SetActive(true); 
-            music.Play(); 
+            PlayerMovement();
+            endGameCanvas.gameObject.SetActive(true);
+            music.Play();
             // Debug.Log("End game.");
         }
 
@@ -207,12 +210,12 @@ namespace PyrrhicSilva
 
         public void Load()
         {
-            podcast.Play(); 
+            podcast.Play();
             if (PlayerPrefs.HasKey("podcast progress"))
             {
                 podcast.time = PlayerPrefs.GetFloat("podcast progress");
             }
-            podcast.Pause(); 
+            podcast.Pause();
         }
 
         private void OnDisable()
