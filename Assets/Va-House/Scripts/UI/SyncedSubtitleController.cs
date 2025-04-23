@@ -39,7 +39,7 @@ namespace PyrrhicSilva.UI
         void Update()
         {
 
-            if (isPlaying)
+            if (isPlaying && currentSubtitleIndex < subtitles.Count)
             {
                 StartCoroutine(PlaySubtitlesCo());
             }
@@ -88,7 +88,10 @@ namespace PyrrhicSilva.UI
         {
             if (!string.IsNullOrEmpty(subtitles[currentSubtitleIndex].speakerName))
             {
-                subtitleText.text = $"{subtitles[currentSubtitleIndex].speakerName}: {subtitles[currentSubtitleIndex].subtitle}";
+                if (currentSubtitleIndex > 0) {
+                    subtitleText.text = $"{subtitles[currentSubtitleIndex - 1].speakerName}: {subtitles[currentSubtitleIndex - 1].subtitle}<br>";
+                }
+                subtitleText.text += $"{subtitles[currentSubtitleIndex].speakerName}: {subtitles[currentSubtitleIndex].subtitle}";
             }
             else
             {
@@ -105,7 +108,7 @@ namespace PyrrhicSilva.UI
         public void LoadSubtitlesFromFile(string filePath)
         {
             subtitles = new List<SubtitleEntry>(); 
-            
+
             string[] lines = File.ReadAllLines(filePath);
             string timePart = "";
             string subtitleText = "";
