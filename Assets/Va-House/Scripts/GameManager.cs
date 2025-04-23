@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using PyrrhicSilva.Interactable;
 using UnityEngine;
 using StarterAssets;
+using PyrrhicSilva.UI;
 
 namespace PyrrhicSilva
 {
@@ -24,9 +25,9 @@ namespace PyrrhicSilva
         internal bool subtitlesOn = true;
         [Header("Audio")]
         [SerializeField] AudioSource outdoors;
-        [SerializeField] AudioSource _podcast;
-        [SerializeField] AudioClip music; 
-        public AudioSource podcast { get { return _podcast; } private set { _podcast = value; } }
+        [SerializeField] SyncedSubtitleController _podcast;
+        [SerializeField] AudioSource music; 
+        public SyncedSubtitleController podcast { get { return _podcast; } private set { _podcast = value; } }
         [Header("Entering Exiting")]
         [SerializeField] ColExitInteract entering;
         [SerializeField] ColEnterInteract exiting;
@@ -123,9 +124,7 @@ namespace PyrrhicSilva
                 currentTask = RandomTask();
                 if (!podcast.isPlaying) {
                     subtitles.PlayNarration(introMusicLines);
-                    podcast.clip = music;
-                    podcast.loop = true; 
-                    podcast.PlayDelayed(2f); 
+                    music.PlayDelayed(2f); 
                 }
             }
             currentTask.gameObject.SetActive(true);
@@ -178,6 +177,9 @@ namespace PyrrhicSilva
                 podcast.Pause();
                 Save();
             }
+            else if (music.isPlaying) {
+                music.Pause(); 
+            }
 
             subtitles.PlayNarration(exitHouseLines, false); // cuts off whatever dialogue that was playing before leaving 
         }
@@ -186,7 +188,7 @@ namespace PyrrhicSilva
         {
             PlayerMovement(); 
             endGameCanvas.gameObject.SetActive(true); 
-            podcast.PlayOneShot(music); 
+            music.Play(); 
             // Debug.Log("End game.");
         }
 
