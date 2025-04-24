@@ -32,6 +32,10 @@ namespace PyrrhicSilva
         [Header("Entering Exiting")]
         [SerializeField] ColExitInteract entering;
         [SerializeField] ColEnterInteract exiting;
+        [Header("Wait between tasks")]
+        [SerializeField] bool wait = false; 
+        [SerializeField] float minWaitTime; 
+        [SerializeField] float maxWaitTime; 
         [Header("Task objects")]
         [SerializeField] GameObject setTable;
         [SerializeField] HouseTask[] allTasks;
@@ -61,7 +65,9 @@ namespace PyrrhicSilva
         // Update is called once per frame
         void Update()
         {
-
+            if (wait) {
+                StartCoroutine(WaitBetweenTasks()); 
+            }
         }
 
         void OnInteract()
@@ -129,6 +135,13 @@ namespace PyrrhicSilva
                     music.PlayDelayed(4f);
                 }
             }
+            wait = true; 
+        }
+
+        IEnumerator WaitBetweenTasks() {
+            yield return new WaitForSeconds(Random.Range(minWaitTime, maxWaitTime)); 
+
+            wait = false; 
             currentTask.gameObject.SetActive(true);
             currentTask.ActivateTask();
         }

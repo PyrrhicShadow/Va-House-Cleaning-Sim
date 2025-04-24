@@ -23888,7 +23888,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -35950,7 +35950,7 @@ MonoBehaviour:
   subtitleTextBox: {fileID: 1915818213}
   audioDescTextBox: {fileID: 0}
   textWindow: {fileID: 387867741}
-  readingSpeed: 0.02
+  readingSpeed: 0.015
   gameManager: {fileID: 8688322422413929988}
   dialogueSounds: {fileID: 1270855766}
   defaultDialogueClip: {fileID: 8300000, guid: 2d6df0d3715897940abdea3cc63075db, type: 3}
@@ -36012,7 +36012,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -50404,7 +50404,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -56815,7 +56815,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1478478789, guid: 850e93cf2b806204b82da7bf075c4e50, type: 3}
+  m_Sprite: {fileID: -1677269006, guid: 850e93cf2b806204b82da7bf075c4e50, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -60779,6 +60779,9 @@ MonoBehaviour:
   music: {fileID: 1848182491}
   entering: {fileID: 206092093}
   exiting: {fileID: 795502271}
+  wait: 0
+  minWaitTime: 1
+  maxWaitTime: 3
   setTable: {fileID: 2093179227}
   allTasks:
   - {fileID: 2002585102}

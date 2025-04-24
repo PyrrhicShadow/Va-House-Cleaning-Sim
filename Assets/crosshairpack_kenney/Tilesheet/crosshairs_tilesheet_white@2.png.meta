@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -111,6 +116,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -4327,209 +4346,208 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      crosshairs_tilesheet_white@2_160: -1430058430
-      crosshairs_tilesheet_white@2_41: 1569589784
-      crosshairs_tilesheet_white@2_116: 1024649667
-      crosshairs_tilesheet_white@2_138: -1479335294
-      crosshairs_tilesheet_white@2_125: 1221979833
-      crosshairs_tilesheet_white@2_141: 677786545
-      crosshairs_tilesheet_white@2_98: -2122208750
-      crosshairs_tilesheet_white@2_174: -1117977141
-      crosshairs_tilesheet_white@2_199: 808154310
-      crosshairs_tilesheet_white@2_15: 880629894
-      crosshairs_tilesheet_white@2_99: -704128820
-      crosshairs_tilesheet_white@2_143: 344495986
-      crosshairs_tilesheet_white@2_159: -214061725
-      crosshairs_tilesheet_white@2_129: -1622506161
-      crosshairs_tilesheet_white@2_22: 685363336
-      crosshairs_tilesheet_white@2_170: -1263269363
-      crosshairs_tilesheet_white@2_139: 1593502004
-      crosshairs_tilesheet_white@2_65: 628463955
-      crosshairs_tilesheet_white@2_38: -1949526323
-      crosshairs_tilesheet_white@2_112: -978764776
-      crosshairs_tilesheet_white@2_191: -1249553869
-      crosshairs_tilesheet_white@2_35: -204396588
-      crosshairs_tilesheet_white@2_48: -440813180
-      crosshairs_tilesheet_white@2_69: 1248541491
-      crosshairs_tilesheet_white@2_100: -1841845728
-      crosshairs_tilesheet_white@2_107: -1522893435
-      crosshairs_tilesheet_white@2_16: 1919506649
-      crosshairs_tilesheet_white@2_124: 2057395055
-      crosshairs_tilesheet_white@2_33: 19261454
-      crosshairs_tilesheet_white@2_24: -65621395
-      crosshairs_tilesheet_white@2_134: -451877157
-      crosshairs_tilesheet_white@2_1: 1275189917
-      crosshairs_tilesheet_white@2_82: 1650990662
-      crosshairs_tilesheet_white@2_118: -1387886260
-      crosshairs_tilesheet_white@2_149: 224245990
-      crosshairs_tilesheet_white@2_63: 1999123831
-      crosshairs_tilesheet_white@2_192: -93661978
-      crosshairs_tilesheet_white@2_196: -1633218385
-      crosshairs_tilesheet_white@2_132: 428318250
-      crosshairs_tilesheet_white@2_164: 1444616939
-      crosshairs_tilesheet_white@2_108: 1069836118
-      crosshairs_tilesheet_white@2_146: -1652105688
-      crosshairs_tilesheet_white@2_176: -596612876
-      crosshairs_tilesheet_white@2_106: 1424236955
-      crosshairs_tilesheet_white@2_68: 1969577468
-      crosshairs_tilesheet_white@2_74: -1865387069
-      crosshairs_tilesheet_white@2_102: -82256629
-      crosshairs_tilesheet_white@2_182: -632110392
-      crosshairs_tilesheet_white@2_12: 125832286
-      crosshairs_tilesheet_white@2_114: -1566784103
-      crosshairs_tilesheet_white@2_120: -1397962552
-      crosshairs_tilesheet_white@2_111: 568883366
-      crosshairs_tilesheet_white@2_104: -106387647
-      crosshairs_tilesheet_white@2_85: -463616417
-      crosshairs_tilesheet_white@2_80: -1271758574
-      crosshairs_tilesheet_white@2_32: -39642153
-      crosshairs_tilesheet_white@2_175: 434560894
-      crosshairs_tilesheet_white@2_72: -1909052055
-      crosshairs_tilesheet_white@2_29: 19240189
-      crosshairs_tilesheet_white@2_185: 1574250946
-      crosshairs_tilesheet_white@2_50: -1078758151
-      crosshairs_tilesheet_white@2_101: 960256722
-      crosshairs_tilesheet_white@2_145: 1668240146
-      crosshairs_tilesheet_white@2_73: 766078706
-      crosshairs_tilesheet_white@2_193: 809842837
-      crosshairs_tilesheet_white@2_55: -1643533398
-      crosshairs_tilesheet_white@2_86: -1522717218
-      crosshairs_tilesheet_white@2_95: -971854341
-      crosshairs_tilesheet_white@2_181: 449530993
-      crosshairs_tilesheet_white@2_105: 1687718383
-      crosshairs_tilesheet_white@2_180: -1648950013
-      crosshairs_tilesheet_white@2_17: -1779981697
-      crosshairs_tilesheet_white@2_140: -1512318810
-      crosshairs_tilesheet_white@2_18: -1220433186
-      crosshairs_tilesheet_white@2_28: -766503011
-      crosshairs_tilesheet_white@2_92: -385670952
-      crosshairs_tilesheet_white@2_93: -1416900023
-      crosshairs_tilesheet_white@2_47: 147912600
-      crosshairs_tilesheet_white@2_133: -1972558826
-      crosshairs_tilesheet_white@2_31: -1732586386
-      crosshairs_tilesheet_white@2_70: 268791030
-      crosshairs_tilesheet_white@2_158: -1828545361
-      crosshairs_tilesheet_white@2_142: -548166088
-      crosshairs_tilesheet_white@2_21: 1452382175
-      crosshairs_tilesheet_white@2_40: 679795591
-      crosshairs_tilesheet_white@2_130: 1621471830
-      crosshairs_tilesheet_white@2_58: 1618994779
-      crosshairs_tilesheet_white@2_59: -568539756
-      crosshairs_tilesheet_white@2_83: 1601402664
-      crosshairs_tilesheet_white@2_62: -2135073543
-      crosshairs_tilesheet_white@2_121: -2095744413
-      crosshairs_tilesheet_white@2_183: 1857365529
-      crosshairs_tilesheet_white@2_131: 637031332
-      crosshairs_tilesheet_white@2_197: -58839474
-      crosshairs_tilesheet_white@2_167: -1920854117
-      crosshairs_tilesheet_white@2_79: -958253845
-      crosshairs_tilesheet_white@2_198: 674967627
-      crosshairs_tilesheet_white@2_194: 306966662
-      crosshairs_tilesheet_white@2_136: 614263921
-      crosshairs_tilesheet_white@2_151: 1567189349
-      crosshairs_tilesheet_white@2_53: 1407357845
-      crosshairs_tilesheet_white@2_39: 19290374
-      crosshairs_tilesheet_white@2_137: 889558105
-      crosshairs_tilesheet_white@2_25: 1440558328
       crosshairs_tilesheet_white@2_0: -975739815
-      crosshairs_tilesheet_white@2_5: -2098750341
-      crosshairs_tilesheet_white@2_177: -220966138
-      crosshairs_tilesheet_white@2_52: 913891744
-      crosshairs_tilesheet_white@2_161: -766639085
-      crosshairs_tilesheet_white@2_117: 549593959
-      crosshairs_tilesheet_white@2_77: 751094885
-      crosshairs_tilesheet_white@2_26: 1202753086
-      crosshairs_tilesheet_white@2_147: 1131162446
-      crosshairs_tilesheet_white@2_11: 122051555
-      crosshairs_tilesheet_white@2_6: -1792120878
-      crosshairs_tilesheet_white@2_43: 144788572
-      crosshairs_tilesheet_white@2_184: 1591254159
-      crosshairs_tilesheet_white@2_64: -1286107716
-      crosshairs_tilesheet_white@2_150: 69091753
-      crosshairs_tilesheet_white@2_169: -1564735335
-      crosshairs_tilesheet_white@2_42: 2040054713
-      crosshairs_tilesheet_white@2_66: 174611915
-      crosshairs_tilesheet_white@2_71: -188090083
-      crosshairs_tilesheet_white@2_96: 2029399928
-      crosshairs_tilesheet_white@2_123: -619386706
-      crosshairs_tilesheet_white@2_128: -1319973566
-      crosshairs_tilesheet_white@2_84: -1345908354
-      crosshairs_tilesheet_white@2_110: -881933170
-      crosshairs_tilesheet_white@2_179: -1930309169
-      crosshairs_tilesheet_white@2_14: -1859102099
-      crosshairs_tilesheet_white@2_46: 834302448
-      crosshairs_tilesheet_white@2_109: -2024576437
-      crosshairs_tilesheet_white@2_178: 1561370873
-      crosshairs_tilesheet_white@2_75: 1631212198
-      crosshairs_tilesheet_white@2_81: 1966304291
-      crosshairs_tilesheet_white@2_135: -175973925
-      crosshairs_tilesheet_white@2_144: 1606981137
-      crosshairs_tilesheet_white@2_119: -1060062733
-      crosshairs_tilesheet_white@2_8: 1660166152
-      crosshairs_tilesheet_white@2_103: -889068084
-      crosshairs_tilesheet_white@2_67: -1419788736
-      crosshairs_tilesheet_white@2_78: -1226810849
-      crosshairs_tilesheet_white@2_91: 162051559
-      crosshairs_tilesheet_white@2_126: -1621337196
-      crosshairs_tilesheet_white@2_113: 1873888224
-      crosshairs_tilesheet_white@2_187: 91364510
-      crosshairs_tilesheet_white@2_4: 1478478789
-      crosshairs_tilesheet_white@2_13: -1919038568
-      crosshairs_tilesheet_white@2_2: 416800413
-      crosshairs_tilesheet_white@2_188: 632303056
-      crosshairs_tilesheet_white@2_49: -516745900
-      crosshairs_tilesheet_white@2_168: 722330143
-      crosshairs_tilesheet_white@2_27: 769383393
-      crosshairs_tilesheet_white@2_163: 394772006
-      crosshairs_tilesheet_white@2_36: -1757425497
-      crosshairs_tilesheet_white@2_166: 995224854
-      crosshairs_tilesheet_white@2_34: -1029840893
-      crosshairs_tilesheet_white@2_157: 1326258603
-      crosshairs_tilesheet_white@2_30: 610525091
+      crosshairs_tilesheet_white@2_1: 1275189917
       crosshairs_tilesheet_white@2_10: -555495205
-      crosshairs_tilesheet_white@2_148: 583174705
-      crosshairs_tilesheet_white@2_153: -163250949
-      crosshairs_tilesheet_white@2_19: -734824353
-      crosshairs_tilesheet_white@2_88: 1387502322
-      crosshairs_tilesheet_white@2_171: -1338661185
-      crosshairs_tilesheet_white@2_189: -2105006787
+      crosshairs_tilesheet_white@2_100: -1841845728
+      crosshairs_tilesheet_white@2_101: 960256722
+      crosshairs_tilesheet_white@2_102: -82256629
+      crosshairs_tilesheet_white@2_103: -889068084
+      crosshairs_tilesheet_white@2_104: -106387647
+      crosshairs_tilesheet_white@2_105: 1687718383
+      crosshairs_tilesheet_white@2_106: 1424236955
+      crosshairs_tilesheet_white@2_107: -1522893435
+      crosshairs_tilesheet_white@2_108: 1069836118
+      crosshairs_tilesheet_white@2_109: -2024576437
+      crosshairs_tilesheet_white@2_11: 122051555
+      crosshairs_tilesheet_white@2_110: -881933170
+      crosshairs_tilesheet_white@2_111: 568883366
+      crosshairs_tilesheet_white@2_112: -978764776
+      crosshairs_tilesheet_white@2_113: 1873888224
+      crosshairs_tilesheet_white@2_114: -1566784103
+      crosshairs_tilesheet_white@2_115: 1339500487
+      crosshairs_tilesheet_white@2_116: 1024649667
+      crosshairs_tilesheet_white@2_117: 549593959
+      crosshairs_tilesheet_white@2_118: -1387886260
+      crosshairs_tilesheet_white@2_119: -1060062733
+      crosshairs_tilesheet_white@2_12: 125832286
+      crosshairs_tilesheet_white@2_120: -1397962552
+      crosshairs_tilesheet_white@2_121: -2095744413
       crosshairs_tilesheet_white@2_122: 1481406748
+      crosshairs_tilesheet_white@2_123: -619386706
+      crosshairs_tilesheet_white@2_124: 2057395055
+      crosshairs_tilesheet_white@2_125: 1221979833
+      crosshairs_tilesheet_white@2_126: -1621337196
       crosshairs_tilesheet_white@2_127: 1750865523
-      crosshairs_tilesheet_white@2_172: -1697873391
+      crosshairs_tilesheet_white@2_128: -1319973566
+      crosshairs_tilesheet_white@2_129: -1622506161
+      crosshairs_tilesheet_white@2_13: -1919038568
+      crosshairs_tilesheet_white@2_130: 1621471830
+      crosshairs_tilesheet_white@2_131: 637031332
+      crosshairs_tilesheet_white@2_132: 428318250
+      crosshairs_tilesheet_white@2_133: -1972558826
+      crosshairs_tilesheet_white@2_134: -451877157
+      crosshairs_tilesheet_white@2_135: -175973925
+      crosshairs_tilesheet_white@2_136: 614263921
+      crosshairs_tilesheet_white@2_137: 889558105
+      crosshairs_tilesheet_white@2_138: -1479335294
+      crosshairs_tilesheet_white@2_139: 1593502004
+      crosshairs_tilesheet_white@2_14: -1859102099
+      crosshairs_tilesheet_white@2_140: -1512318810
+      crosshairs_tilesheet_white@2_141: 677786545
+      crosshairs_tilesheet_white@2_142: -548166088
+      crosshairs_tilesheet_white@2_143: 344495986
+      crosshairs_tilesheet_white@2_144: 1606981137
+      crosshairs_tilesheet_white@2_145: 1668240146
+      crosshairs_tilesheet_white@2_146: -1652105688
+      crosshairs_tilesheet_white@2_147: 1131162446
+      crosshairs_tilesheet_white@2_148: 583174705
+      crosshairs_tilesheet_white@2_149: 224245990
+      crosshairs_tilesheet_white@2_15: 880629894
+      crosshairs_tilesheet_white@2_150: 69091753
+      crosshairs_tilesheet_white@2_151: 1567189349
+      crosshairs_tilesheet_white@2_152: 1265094827
+      crosshairs_tilesheet_white@2_153: -163250949
+      crosshairs_tilesheet_white@2_154: 1720314752
       crosshairs_tilesheet_white@2_155: 948672117
-      crosshairs_tilesheet_white@2_195: 110606578
-      crosshairs_tilesheet_white@2_9: 955469834
+      crosshairs_tilesheet_white@2_156: 1883876488
+      crosshairs_tilesheet_white@2_157: 1326258603
+      crosshairs_tilesheet_white@2_158: -1828545361
+      crosshairs_tilesheet_white@2_159: -214061725
+      crosshairs_tilesheet_white@2_16: 1919506649
+      crosshairs_tilesheet_white@2_160: -1430058430
+      crosshairs_tilesheet_white@2_161: -766639085
+      crosshairs_tilesheet_white@2_162: -26178063
+      crosshairs_tilesheet_white@2_163: 394772006
+      crosshairs_tilesheet_white@2_164: 1444616939
+      crosshairs_tilesheet_white@2_165: 1063404216
+      crosshairs_tilesheet_white@2_166: 995224854
+      crosshairs_tilesheet_white@2_167: -1920854117
+      crosshairs_tilesheet_white@2_168: 722330143
+      crosshairs_tilesheet_white@2_169: -1564735335
+      crosshairs_tilesheet_white@2_17: -1779981697
+      crosshairs_tilesheet_white@2_170: -1263269363
+      crosshairs_tilesheet_white@2_171: -1338661185
+      crosshairs_tilesheet_white@2_172: -1697873391
+      crosshairs_tilesheet_white@2_173: -1796305959
+      crosshairs_tilesheet_white@2_174: -1117977141
+      crosshairs_tilesheet_white@2_175: 434560894
+      crosshairs_tilesheet_white@2_176: -596612876
+      crosshairs_tilesheet_white@2_177: -220966138
+      crosshairs_tilesheet_white@2_178: 1561370873
+      crosshairs_tilesheet_white@2_179: -1930309169
+      crosshairs_tilesheet_white@2_18: -1220433186
+      crosshairs_tilesheet_white@2_180: -1648950013
+      crosshairs_tilesheet_white@2_181: 449530993
+      crosshairs_tilesheet_white@2_182: -632110392
+      crosshairs_tilesheet_white@2_183: 1857365529
+      crosshairs_tilesheet_white@2_184: 1591254159
+      crosshairs_tilesheet_white@2_185: 1574250946
       crosshairs_tilesheet_white@2_186: -136890956
+      crosshairs_tilesheet_white@2_187: 91364510
+      crosshairs_tilesheet_white@2_188: 632303056
+      crosshairs_tilesheet_white@2_189: -2105006787
+      crosshairs_tilesheet_white@2_19: -734824353
+      crosshairs_tilesheet_white@2_190: -912548958
+      crosshairs_tilesheet_white@2_191: -1249553869
+      crosshairs_tilesheet_white@2_192: -93661978
+      crosshairs_tilesheet_white@2_193: 809842837
+      crosshairs_tilesheet_white@2_194: 306966662
+      crosshairs_tilesheet_white@2_195: 110606578
+      crosshairs_tilesheet_white@2_196: -1633218385
+      crosshairs_tilesheet_white@2_197: -58839474
+      crosshairs_tilesheet_white@2_198: 674967627
+      crosshairs_tilesheet_white@2_199: 808154310
+      crosshairs_tilesheet_white@2_2: 416800413
+      crosshairs_tilesheet_white@2_20: -1491367274
+      crosshairs_tilesheet_white@2_21: 1452382175
+      crosshairs_tilesheet_white@2_22: 685363336
+      crosshairs_tilesheet_white@2_23: -224163245
+      crosshairs_tilesheet_white@2_24: -65621395
+      crosshairs_tilesheet_white@2_25: 1440558328
+      crosshairs_tilesheet_white@2_26: 1202753086
+      crosshairs_tilesheet_white@2_27: 769383393
+      crosshairs_tilesheet_white@2_28: -766503011
+      crosshairs_tilesheet_white@2_29: 19240189
+      crosshairs_tilesheet_white@2_3: -1677269006
+      crosshairs_tilesheet_white@2_30: 610525091
+      crosshairs_tilesheet_white@2_31: -1732586386
+      crosshairs_tilesheet_white@2_32: -39642153
+      crosshairs_tilesheet_white@2_33: 19261454
+      crosshairs_tilesheet_white@2_34: -1029840893
+      crosshairs_tilesheet_white@2_35: -204396588
+      crosshairs_tilesheet_white@2_36: -1757425497
+      crosshairs_tilesheet_white@2_37: 553612196
+      crosshairs_tilesheet_white@2_38: -1949526323
+      crosshairs_tilesheet_white@2_39: 19290374
+      crosshairs_tilesheet_white@2_4: 1478478789
+      crosshairs_tilesheet_white@2_40: 679795591
+      crosshairs_tilesheet_white@2_41: 1569589784
+      crosshairs_tilesheet_white@2_42: 2040054713
+      crosshairs_tilesheet_white@2_43: 144788572
+      crosshairs_tilesheet_white@2_44: 1546747386
+      crosshairs_tilesheet_white@2_45: 1351173305
+      crosshairs_tilesheet_white@2_46: 834302448
+      crosshairs_tilesheet_white@2_47: 147912600
+      crosshairs_tilesheet_white@2_48: -440813180
+      crosshairs_tilesheet_white@2_49: -516745900
+      crosshairs_tilesheet_white@2_5: -2098750341
+      crosshairs_tilesheet_white@2_50: -1078758151
+      crosshairs_tilesheet_white@2_51: -1753428680
+      crosshairs_tilesheet_white@2_52: 913891744
+      crosshairs_tilesheet_white@2_53: 1407357845
+      crosshairs_tilesheet_white@2_54: -1706630695
+      crosshairs_tilesheet_white@2_55: -1643533398
       crosshairs_tilesheet_white@2_56: 287915079
       crosshairs_tilesheet_white@2_57: 790346773
-      crosshairs_tilesheet_white@2_162: -26178063
-      crosshairs_tilesheet_white@2_156: 1883876488
-      crosshairs_tilesheet_white@2_61: 2122586111
-      crosshairs_tilesheet_white@2_20: -1491367274
-      crosshairs_tilesheet_white@2_115: 1339500487
-      crosshairs_tilesheet_white@2_90: 1690217983
-      crosshairs_tilesheet_white@2_94: 415727572
-      crosshairs_tilesheet_white@2_89: 1215580716
-      crosshairs_tilesheet_white@2_190: -912548958
-      crosshairs_tilesheet_white@2_37: 553612196
-      crosshairs_tilesheet_white@2_51: -1753428680
-      crosshairs_tilesheet_white@2_54: -1706630695
-      crosshairs_tilesheet_white@2_3: -1677269006
-      crosshairs_tilesheet_white@2_45: 1351173305
-      crosshairs_tilesheet_white@2_23: -224163245
-      crosshairs_tilesheet_white@2_76: 532113962
-      crosshairs_tilesheet_white@2_152: 1265094827
-      crosshairs_tilesheet_white@2_87: 1549542488
-      crosshairs_tilesheet_white@2_154: 1720314752
-      crosshairs_tilesheet_white@2_173: -1796305959
-      crosshairs_tilesheet_white@2_7: -1537529943
-      crosshairs_tilesheet_white@2_44: 1546747386
+      crosshairs_tilesheet_white@2_58: 1618994779
+      crosshairs_tilesheet_white@2_59: -568539756
+      crosshairs_tilesheet_white@2_6: -1792120878
       crosshairs_tilesheet_white@2_60: 1375254597
+      crosshairs_tilesheet_white@2_61: 2122586111
+      crosshairs_tilesheet_white@2_62: -2135073543
+      crosshairs_tilesheet_white@2_63: 1999123831
+      crosshairs_tilesheet_white@2_64: -1286107716
+      crosshairs_tilesheet_white@2_65: 628463955
+      crosshairs_tilesheet_white@2_66: 174611915
+      crosshairs_tilesheet_white@2_67: -1419788736
+      crosshairs_tilesheet_white@2_68: 1969577468
+      crosshairs_tilesheet_white@2_69: 1248541491
+      crosshairs_tilesheet_white@2_7: -1537529943
+      crosshairs_tilesheet_white@2_70: 268791030
+      crosshairs_tilesheet_white@2_71: -188090083
+      crosshairs_tilesheet_white@2_72: -1909052055
+      crosshairs_tilesheet_white@2_73: 766078706
+      crosshairs_tilesheet_white@2_74: -1865387069
+      crosshairs_tilesheet_white@2_75: 1631212198
+      crosshairs_tilesheet_white@2_76: 532113962
+      crosshairs_tilesheet_white@2_77: 751094885
+      crosshairs_tilesheet_white@2_78: -1226810849
+      crosshairs_tilesheet_white@2_79: -958253845
+      crosshairs_tilesheet_white@2_8: 1660166152
+      crosshairs_tilesheet_white@2_80: -1271758574
+      crosshairs_tilesheet_white@2_81: 1966304291
+      crosshairs_tilesheet_white@2_82: 1650990662
+      crosshairs_tilesheet_white@2_83: 1601402664
+      crosshairs_tilesheet_white@2_84: -1345908354
+      crosshairs_tilesheet_white@2_85: -463616417
+      crosshairs_tilesheet_white@2_86: -1522717218
+      crosshairs_tilesheet_white@2_87: 1549542488
+      crosshairs_tilesheet_white@2_88: 1387502322
+      crosshairs_tilesheet_white@2_89: 1215580716
+      crosshairs_tilesheet_white@2_9: 955469834
+      crosshairs_tilesheet_white@2_90: 1690217983
+      crosshairs_tilesheet_white@2_91: 162051559
+      crosshairs_tilesheet_white@2_92: -385670952
+      crosshairs_tilesheet_white@2_93: -1416900023
+      crosshairs_tilesheet_white@2_94: 415727572
+      crosshairs_tilesheet_white@2_95: -971854341
+      crosshairs_tilesheet_white@2_96: 2029399928
       crosshairs_tilesheet_white@2_97: 35168712
-      crosshairs_tilesheet_white@2_165: 1063404216
-  spritePackingTag: 
+      crosshairs_tilesheet_white@2_98: -2122208750
+      crosshairs_tilesheet_white@2_99: -704128820
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
