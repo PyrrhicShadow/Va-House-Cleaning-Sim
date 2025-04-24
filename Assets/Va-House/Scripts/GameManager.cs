@@ -9,7 +9,7 @@ namespace PyrrhicSilva
 {
     public class GameManager : MonoBehaviour
     {
-
+        [SerializeField] internal bool debug = false; 
         [SerializeField] Interact interact;
         [SerializeField] OpenAndClose frontDoor;
         [SerializeField] FirstPersonController character;
