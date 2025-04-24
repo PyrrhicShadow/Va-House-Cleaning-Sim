@@ -60689,7 +60689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: minWaitTime
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: endGameCanvas

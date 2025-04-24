@@ -4,6 +4,7 @@ using PyrrhicSilva.Interactable;
 using UnityEngine;
 using StarterAssets;
 using PyrrhicSilva.UI;
+using System.Linq;
 
 namespace PyrrhicSilva
 {
@@ -68,7 +69,7 @@ namespace PyrrhicSilva
             if (waitBeforeTask && !narrationPlaying)
             {
                 StartCoroutine(WaitBetweenTasks());
-                waitBeforeTask = false; 
+                waitBeforeTask = false;
             }
         }
 
@@ -142,9 +143,14 @@ namespace PyrrhicSilva
 
         IEnumerator WaitBetweenTasks()
         {
-            yield return new WaitForSeconds(Random.Range(minWaitTime, maxWaitTime));
-
-            yield return new WaitForEndOfFrame();
+            if (taskIndex < allTasks.Length)
+            {
+                yield return new WaitForSeconds(1f);
+            }
+            else
+            {
+                yield return new WaitForSeconds(Random.Range(minWaitTime, maxWaitTime));
+            }
             currentTask.gameObject.SetActive(true);
             currentTask.ActivateTask();
             waitBeforeTask = false;
