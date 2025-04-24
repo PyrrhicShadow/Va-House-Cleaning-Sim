@@ -9,7 +9,7 @@ namespace PyrrhicSilva
 {
     public class GameManager : MonoBehaviour
     {
-        [SerializeField] internal bool debug = false; 
+        [SerializeField] internal bool debug = false;
         [SerializeField] Interact interact;
         [SerializeField] OpenAndClose frontDoor;
         [SerializeField] FirstPersonController character;
@@ -33,9 +33,9 @@ namespace PyrrhicSilva
         [SerializeField] ColExitInteract entering;
         [SerializeField] ColEnterInteract exiting;
         [Header("Wait between tasks")]
-        [SerializeField] bool wait = false; 
-        [SerializeField] float minWaitTime; 
-        [SerializeField] float maxWaitTime; 
+        [SerializeField] bool waitBeforeTask = false;
+        [SerializeField] float minWaitTime;
+        [SerializeField] float maxWaitTime;
         [Header("Task objects")]
         [SerializeField] GameObject setTable;
         [SerializeField] HouseTask[] allTasks;
@@ -65,8 +65,10 @@ namespace PyrrhicSilva
         // Update is called once per frame
         void Update()
         {
-            if (wait) {
-                StartCoroutine(WaitBetweenTasks()); 
+            if (waitBeforeTask && !narrationPlaying)
+            {
+                StartCoroutine(WaitBetweenTasks());
+                waitBeforeTask = false; 
             }
         }
 
@@ -135,15 +137,17 @@ namespace PyrrhicSilva
                     music.PlayDelayed(4f);
                 }
             }
-            wait = true; 
+            waitBeforeTask = true;
         }
 
-        IEnumerator WaitBetweenTasks() {
-            yield return new WaitForSeconds(Random.Range(minWaitTime, maxWaitTime)); 
+        IEnumerator WaitBetweenTasks()
+        {
+            yield return new WaitForSeconds(Random.Range(minWaitTime, maxWaitTime));
 
-            wait = false; 
+            yield return new WaitForEndOfFrame();
             currentTask.gameObject.SetActive(true);
             currentTask.ActivateTask();
+            waitBeforeTask = false;
         }
 
         private HouseTask RandomTask()

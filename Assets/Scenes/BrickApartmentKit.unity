@@ -23509,11 +23509,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8136687124933929416, guid: f3e82dc7c471ff447b3ca0e0bfded076, type: 3}
   m_PrefabInstance: {fileID: 894482123}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &896625885 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
-  m_PrefabInstance: {fileID: 8673274663166455072}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &896794409
 GameObject:
   m_ObjectHideFlags: 0
@@ -58588,7 +58583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.111285
+      value: 10.400001
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_LocalPosition.z
@@ -60127,7 +60122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.111285
+      value: 10.400001
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_LocalPosition.z
@@ -60636,6 +60631,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6015744297907711004}
     m_Modifications:
+    - target: {fileID: 4135013735270702856, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5812253
+      objectReference: {fileID: 0}
     - target: {fileID: 5393215578589016655, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -60648,6 +60647,94 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 670224309865224971, guid: bfff06aaff363a847ad37bf592364e6b, type: 3}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 1848182491}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: exiting
+      value: 
+      objectReference: {fileID: 795502271}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: _podcast
+      value: 
+      objectReference: {fileID: 1929092683}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: entering
+      value: 
+      objectReference: {fileID: 206092093}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: interact
+      value: 
+      objectReference: {fileID: 383360169909618824}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: outdoors
+      value: 
+      objectReference: {fileID: 1047590254}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: setTable
+      value: 
+      objectReference: {fileID: 2093179227}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: frontDoor
+      value: 
+      objectReference: {fileID: 69853048}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: subtitles
+      value: 
+      objectReference: {fileID: 1270855762}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: maxWaitTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: minWaitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: endGameCanvas
+      value: 
+      objectReference: {fileID: 1566745937}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: allTasks.Array.data[0]
+      value: 
+      objectReference: {fileID: 2002585102}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: allTasks.Array.data[1]
+      value: 
+      objectReference: {fileID: 1611319891}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: allTasks.Array.data[2]
+      value: 
+      objectReference: {fileID: 608472088}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: allTasks.Array.data[3]
+      value: 
+      objectReference: {fileID: 2110896767}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: allTasks.Array.data[4]
+      value: 
+      objectReference: {fileID: 1884408483}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: allTasks.Array.data[5]
+      value: 
+      objectReference: {fileID: 448710306}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: allTasks.Array.data[6]
+      value: 
+      objectReference: {fileID: 511789555}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: allTasks.Array.data[7]
+      value: 
+      objectReference: {fileID: 2130507771}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: dishesQueue.Array.data[0]
+      value: 
+      objectReference: {fileID: 2002585102}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: dishesQueue.Array.data[1]
+      value: 
+      objectReference: {fileID: 448710306}
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: GroundLayers.m_Bits
       value: 1
@@ -60719,94 +60806,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8688322422413929988}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
 --- !u!114 &8688322422413929983 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5420857361349278248, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
   m_PrefabInstance: {fileID: 8673274663166455072}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896625885}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e087ecce43ebbff45a1b360637807d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8688322422413929988
+--- !u!114 &8688322422413929988 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 8673274663166455072}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896625885}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3296e8b31bf6a54694254811466f741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debug: 0
-  interact: {fileID: 383360169909618824}
-  frontDoor: {fileID: 69853048}
-  character: {fileID: 8688322422413929991}
-  subtitles: {fileID: 1270855762}
-  endGameCanvas: {fileID: 1566745937}
-  gameOpeningLines:
-  - Hello, there. I'm so glad you showed up.
-  - 'I was worried I was going to have to clean this house all by myself. '
-  - That would've been dreadful, especially in this weather.
-  - Well, the place isn't going to clean itself.
-  - I'm gonna get started over here. Why don't you join me?
-  introPodcastLines:
-  - Here, let me put on a podcast for us to listen to.
-  - Isn't it relaxing to have something playing in the background while we work?
-  - Anyhow, let's get back to it.
-  introMusicLines:
-  - Well, wasn't that just enlightening!
-  - Such a shame it was over so quickly, now the silence feels so uninviting.
-  - Let's put on some background music to work with.
-  exitHouseLines:
-  - You're free to come and go as you please.
-  - Just remember to stay warm out there.
-  returnLines:
-  - Welcome back!
-  - Are you ready to tidy up some more?
-  _subtitlesOn: 0
-  outdoors: {fileID: 1047590254}
-  _podcast: {fileID: 1929092683}
-  music: {fileID: 1848182491}
-  entering: {fileID: 206092093}
-  exiting: {fileID: 795502271}
-  wait: 0
-  minWaitTime: 1
-  maxWaitTime: 3
-  setTable: {fileID: 2093179227}
-  allTasks:
-  - {fileID: 2002585102}
-  - {fileID: 1611319891}
-  - {fileID: 608472088}
-  - {fileID: 2110896767}
-  - {fileID: 1884408483}
-  - {fileID: 448710306}
-  - {fileID: 511789555}
-  - {fileID: 2130507771}
-  dishesQueue:
-  - {fileID: 2002585102}
-  - {fileID: 448710306}
-  _taskIndex: 0
-  _dishesIndex: 0
-  _currentTask: {fileID: 0}
---- !u!114 &8688322422413929991 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
-  m_PrefabInstance: {fileID: 8673274663166455072}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896625885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55919ac34a26952479f3fc91f777b2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &8771938923908571829
