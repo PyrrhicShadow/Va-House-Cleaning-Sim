@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18827614, g: 0.19113815, b: 0.19109792, a: 1}
+  m_IndirectSpecularColor: {r: 0.18690345, g: 0.1884956, b: 0.1897957, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -43168,7 +43168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1566745931
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43309,7 +43309,7 @@ MonoBehaviour:
   headers:
   - Programming, Game Design, Art
   - Additional Programming
-  - 3D Art
+  - 3D Models
   - 3D Art (cont.)
   - 2D Art
   - Sound Effects
@@ -43324,9 +43324,10 @@ MonoBehaviour:
   - '"Skybox Series Free" by Avionx from the Unity Asset Store <br>"Free 32 RPG Animations"
     by Blink from the Unity Asset Store <br>"Apartment Kit" by Brick Project Studio
     from the Unity Asset Store <br>"Distant Lands Free Characters" by Distant Lands
-    from the Unity Asset Store <br>"Rag" and "Cardboard Boxes with Tape" by GVODZY
-    from the Unity Asset Store'
-  - '"3D Game Lamppost" by Tolik_Cola from the Unity Asset Store<br>"School Supplies"
+    from the Unity Asset Store <br>"Stylized Spruce Trees" by Erbeilo3D from the
+    Unity Asset Store <br>'
+  - '"Rag" and "Cardboard Boxes with Tape" by GVODZY from the Unity Asset Store <br>"3D
+    Game Lamppost" by Tolik_Cola from the Unity Asset Store<br>"School Supplies"
     by Rodolfo Rubens from the Unity Asset Store <br>"Books Pack" and "Modular Sofa
     FREE" by Vertex Studio from the Unity Asset Store'
   - '"Crosshair Pack" by Kenney Vleugels'
@@ -49386,11 +49387,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"Skybox Series Free" by Avionx from the Unity Asset Store <br>"Free 32
-    RPG Animations" by Blink from the Unity Asset Store <br>"Apartment Kit" by Brick
-    Project Studio from the Unity Asset Store <br>"Distant Lands Free Characters"
-    by Distant Lands from the Unity Asset Store <br>"Rag" and "Cardboard Boxes with
-    Tape" by GVODZY from the Unity Asset Store'
+  m_text: '"Rag" and "Cardboard Boxes with Tape" by GVODZY from the Unity Asset Store
+    <br>"3D Game Lamppost" by Tolik_Cola from the Unity Asset Store<br>"School Supplies"
+    by Rodolfo Rubens from the Unity Asset Store <br>"Books Pack" and "Modular Sofa
+    FREE" by Vertex Studio from the Unity Asset Store'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
