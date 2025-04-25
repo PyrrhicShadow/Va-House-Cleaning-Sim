@@ -4,7 +4,7 @@ In the dark space between endings and beginnings, a lone house stands on a hill.
 
 An existential house-cleaning sim liberally inspired by the level "House" in Davey Wreden's *The Beginner's Guide*. 
 
-Try it now from the comfort of [your browser](https://pyrrhicshadow.github.io/Va-House-Cleaning-Sim/Builds/Va-House%20WebGL)
+Try it now from the comfort of [your browser](https://pyrrhicshadow.github.io/Va-House-Cleaning-Sim/Builds/Va-House%20WebGL).
 
 ## Jobs 
 
@@ -31,7 +31,7 @@ Featuring a podcast by Pyrrhic Silva for your listening enjoyment.
 * Unity Subtitle Manager by [LordEvilM44](https://github.com/LordEvilM44Dev) on [GitHub](https://github.com/LordEvilM44Dev/Unity-Subtitle-System) under the [MIT License](https://github.com/LordEvilM44Dev/Unity-Subtitle-System/blob/main/LICENSE)
 * Starter Assets - First Person Character Controller by [Unity Technologies](https://assetstore.unity.com/publishers/1) from the [Unity Asset Store](https://assetstore.unity.com/packages/essentials/starter-assets-first-person-character-controller-196525)
 
-### 3D Art
+### 3D Models
 
 * Skybox Series Free by [Avionx](https://assetstore.unity.com/publishers/31837) from the [Unity Asset Store](https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633)
 * Free 32 RPG Animations by [Blink](https://assetstore.unity.com/publishers/49855) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/animations/free-32-rpg-animations-215058)
@@ -46,11 +46,11 @@ Featuring a podcast by Pyrrhic Silva for your listening enjoyment.
 * Books Pack (deprecated) by [Vertex Studio](https://assetstore.unity.com/publishers/2053) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/props/interior/books-pack-5484) 
 * Modular Sofa FREE by [Vertex Studio](https://assetstore.unity.com/publishers/2053) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/props/cardboard-boxes-with-tape-305511)
 
-### 2D Art 
+### 2D Sprites
 
 * Crosshair Pack by [Kenney Vleugels](https://www.Kenney.nl)
 
-### Sounds 
+### Sound Effects
 
 * RPG text speech sound by 666HeroHero on [Pixabay](https://pixabay.com/sound-effects/rpg-text-speech-sound-131477/)
 * door-open-close by j-tap on [Pixabay](https://pixabay.com/sound-effects/door-open-close-45475/)
@@ -65,10 +65,11 @@ Featuring a podcast by Pyrrhic Silva for your listening enjoyment.
 
 ### Podcast 
 
-Federici, Silvia. Wages against Housework. Bristol, Montpelier Falling Wall Press, 1975, pp. 74–87.
+Wages Against Housework - SJSU Phil 121 Fall 2024 final project
 
-Hartley, Gemma. “Do Men Really Not See the Mess like Women Do? The Answer May Surprise You.” Good Housekeeping, 13 Oct. 2024, www.goodhousekeeping.com/life/relationships/a61822374/do-men-not-see-the-mess/. Accessed 17 Dec. 2024.
+Citations
 
-Kisner, Jordan. “The Lockdown Showed How the Economy Exploits Women. She Already Knew.” The New York Times, 17 Feb. 2021, www.nytimes.com/2021/02/17/magazine/waged-housework.html.
-
-Lugones, María. “Playfulness, “World”-Travelling, and Loving Perception.” Hypatia, vol. 2, no. 2, 1987, pp. 3–19, www.jstor.org/stable/3810013. 
+* Federici, Silvia. Wages against Housework. Bristol, Montpelier Falling Wall Press, 1975, pp. 74–87.
+* Hartley, Gemma. “Do Men Really Not See the Mess like Women Do? The Answer May Surprise You.” Good Housekeeping, 13 Oct. 2024, www.goodhousekeeping.com/life/relationships/a61822374/do-men-not-see-the-mess/. Accessed 17 Dec. 2024.
+* Kisner, Jordan. “The Lockdown Showed How the Economy Exploits Women. She Already Knew.” The New York Times, 17 Feb. 2021, www.nytimes.com/2021/02/17/magazine/waged-housework.html.
+* Lugones, María. “Playfulness, “World”-Travelling, and Loving Perception.” Hypatia, vol. 2, no. 2, 1987, pp. 3–19, www.jstor.org/stable/3810013. 
