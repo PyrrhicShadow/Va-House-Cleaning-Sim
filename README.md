@@ -4,6 +4,8 @@ In the dark space between endings and beginnings, a lone house stands on a hill.
 
 An existential house-cleaning sim liberally inspired by the level "House" in Davey Wreden's *The Beginner's Guide*. 
 
+Try it now from the comfort of [your browser](https://pyrrhicshadow.github.io/Va-House-Cleaning-Sim/Builds/Va-House%20WebGL)
+
 ## Jobs 
 
 Cleaning jobs include 
