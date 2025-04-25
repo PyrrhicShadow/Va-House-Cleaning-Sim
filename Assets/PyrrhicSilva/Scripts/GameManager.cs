@@ -14,7 +14,7 @@ namespace PyrrhicSilva
         [SerializeField] Interact interact;
         [SerializeField] OpenAndClose frontDoor;
         [SerializeField] FirstPersonController character;
-        [SerializeField] internal UI.SubtitleController subtitles;
+        [SerializeField] internal SubtitleController subtitles;
         [SerializeField] CreditsController endGameCanvas;
         [Header("Dialogue lines")]
         [SerializeField] string[] gameOpeningLines;

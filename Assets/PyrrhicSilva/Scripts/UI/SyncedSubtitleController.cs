@@ -94,14 +94,14 @@ namespace PyrrhicSilva.UI
         {
             if (!string.IsNullOrEmpty(subtitles[currentSubtitleIndex].speakerName))
             {
-                if (currentSubtitleIndex > 0)
-                {
-                    subtitleText.text = $"{subtitles[currentSubtitleIndex - 1].speakerName}: {subtitles[currentSubtitleIndex - 1].subtitle}<br>";
-                }
-                else
-                {
-                    subtitleText.text = string.Empty;
-                }
+                // if (currentSubtitleIndex > 0)
+                // {
+                //     subtitleText.text = $"{subtitles[currentSubtitleIndex - 1].speakerName}: {subtitles[currentSubtitleIndex - 1].subtitle}<br>";
+                // }
+                // else
+                // {
+                //     subtitleText.text = string.Empty;
+                // }
                 subtitleText.text += $"{subtitles[currentSubtitleIndex].speakerName}: {subtitles[currentSubtitleIndex].subtitle}";
             }
             else
