@@ -38,6 +38,7 @@ Featuring a podcast by Pyrrhic Silva for your listening enjoyment.
 * Rag by [GVODZY](https://assetstore.unity.com/publishers/91841) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/props/rag-305431)
 * Cardboard Boxes with Tape by [GVODZY](https://assetstore.unity.com/publishers/91841) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/props/cardboard-boxes-with-tape-305511)
 * School Supplies by [Rodolfo Rubens](https://assetstore.unity.com/publishers/2192) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/school-supplies-96667)
+* Terrain Textures - FREE by [Rowlan](https://assetstore.unity.com/publishers/48228) from the [Unity Asset Store](https://assetstore.unity.com/packages/p/terrain-textures-free-271990)
 * 3D Game Lamppost by [Tolik_Cola](https://assetstore.unity.com/publishers/113417) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/urban/3d-game-lamppost-312490)
 * Books Pack (deprecated) by [Vertex Studio](https://assetstore.unity.com/publishers/2053) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/props/interior/books-pack-5484) 
 * Modular Sofa FREE by [Vertex Studio](https://assetstore.unity.com/publishers/2053) from the [Unity Asset Store](https://assetstore.unity.com/packages/3d/props/cardboard-boxes-with-tape-305511)
