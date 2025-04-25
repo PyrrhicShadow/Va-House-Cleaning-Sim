@@ -60,7 +60,6 @@ Kisner, Jordan. “The Lockdown Showed How the Economy Exploits Women. She Alrea
 
 Lugones, María. “Playfulness, “World”-Travelling, and Loving Perception.” Hypatia, vol. 2, no. 2, 1987, pp. 3–19, www.jstor.org/stable/3810013. 
 
-
 ### Sounds 
 
 * RPG text speech sound by 666HeroHero on [Pixabay](https://pixabay.com/sound-effects/rpg-text-speech-sound-131477/)
