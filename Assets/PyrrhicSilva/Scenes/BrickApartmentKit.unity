@@ -426,8 +426,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 180}
+  m_AnchoredPosition: {x: 0, y: 10}
+  m_SizeDelta: {x: 800, y: 160}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &448710306 stripped
 MonoBehaviour:
@@ -1052,7 +1052,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: 110}
   m_SizeDelta: {x: 760, y: 120}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &863292309 stripped
@@ -1117,7 +1117,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Models
+  m_text: Additional Art (cont.)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2056,9 +2056,8 @@ MonoBehaviour:
   headers:
   - Programming, Game Design, Art
   - Additional Programming
-  - 3D Models
-  - 3D Art (cont.)
-  - 2D Art
+  - Additional Art
+  - Additional Art (cont.)
   - Sound Effects
   - Music
   - Special Thanks
@@ -2073,11 +2072,11 @@ MonoBehaviour:
     from the Unity Asset Store <br>"Distant Lands Free Characters" by Distant Lands
     from the Unity Asset Store <br>"Stylized Spruce Trees" by Erbeilo3D from the
     Unity Asset Store <br>'
-  - '"Rag" and "Cardboard Boxes with Tape" by GVODZY from the Unity Asset Store <br>"3D
-    Game Lamppost" by Tolik_Cola from the Unity Asset Store<br>"School Supplies"
-    by Rodolfo Rubens from the Unity Asset Store <br>"Books Pack" and "Modular Sofa
-    FREE" by Vertex Studio from the Unity Asset Store'
-  - '"Crosshair Pack" by Kenney Vleugels'
+  - '"Rag" and "Cardboard Boxes with Tape" by GVODZY from the Unity Asset Store <br>"Crosshair
+    Pack" by Kenney Vleugels <br>"3D Game Lamppost" by Tolik_Cola from the Unity
+    Asset Store<br>"School Supplies" by Rodolfo Rubens from the Unity Asset Store
+    <br>"Books Pack" and "Modular Sofa FREE" by Vertex Studio from the Unity Asset
+    Store'
   - '"RPG text speech sound" by 666HeroHero on Pixabay <br>"door-open-close" by j-tap
     on Pixabay <br>"Button and Interface" by StudioAlivioGlobal on Pixabay <br>"Night
     Sky Sound Effect 01" by Subhasis Mandal on Pixabay <br>"collect" by Wagna on
@@ -2085,7 +2084,8 @@ MonoBehaviour:
   - 'Song: "Somewhere In The Clouds by Keys Of Moon" by Keys of Moon, muisc powered
     by BreakingCopyright, Creative Commons (BY 3.0) <br>Feminism: Wages Against Housework
     podcast episode by Jake Kao'
-  - Mom and Dad <br>Muga <br>Hollow Sweed <br>Davey Wreden's The Beginner's Guide
+  - "Mom and Dad <br>Muga <br>Hollow Sweed and Lest\xE2t<br>Davey Wreden's The Beginner's
+    Guide"
   - Thank you for playing!
   textWindow: {fileID: 896794411}
   headerTextBox: {fileID: 874010353}
@@ -2418,9 +2418,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: '"Rag" and "Cardboard Boxes with Tape" by GVODZY from the Unity Asset Store
-    <br>"3D Game Lamppost" by Tolik_Cola from the Unity Asset Store<br>"School Supplies"
-    by Rodolfo Rubens from the Unity Asset Store <br>"Books Pack" and "Modular Sofa
-    FREE" by Vertex Studio from the Unity Asset Store'
+    <br>"Crosshair Pack" by Kenney Vleugels <br>"3D Game Lamppost" by Tolik_Cola
+    from the Unity Asset Store<br>"School Supplies" by Rodolfo Rubens from the Unity
+    Asset Store <br>"Books Pack" and "Modular Sofa FREE" by Vertex Studio from the
+    Unity Asset Store'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2777,7 +2778,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 90}
+  m_AnchoredPosition: {x: 0, y: 95}
   m_SizeDelta: {x: 720, y: 60}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1915818213
@@ -4404,6 +4405,10 @@ PrefabInstance:
     - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: minWaitTime
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: _subtitlesOn
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8082838896421412467, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: endGameCanvas

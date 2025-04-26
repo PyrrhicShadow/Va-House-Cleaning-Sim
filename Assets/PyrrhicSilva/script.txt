@@ -5,7 +5,6 @@ Why don't I play you a podcast while you work?
 
 Billboards by John French on Game Dev Beginner <br>Unity Subtitle Manager by LordEvilM44 on GitHub under the MIT License <br>"Starter Assets - First Person Character Controller" by Unity Technologies from the Unity Asset Store
 "Skybox Series Free" by Avionx from the Unity Asset Store <br>"Free 32 RPG Animations" by Blink from the Unity Asset Store <br>"Apartment Kit" by Brick Project Studio from the Unity Asset Store <br>"Distant Lands Free Characters" by Distant Lands from the Unity Asset Store <br>"Stylized Spruce Trees" by Erbeilo3D from the Unity Asset Store <br>
-"Rag" and "Cardboard Boxes with Tape" by GVODZY from the Unity Asset Store <br>"3D Game Lamppost" by Tolik_Cola from the Unity Asset Store<br>"School Supplies" by Rodolfo Rubens from the Unity Asset Store <br>"Books Pack" and "Modular Sofa FREE" by Vertex Studio from the Unity Asset Store
-"Crosshair Pack" by Kenney Vleugels <br>Additional art by Pyrrhic Silva 
+"Rag" and "Cardboard Boxes with Tape" by GVODZY from the Unity Asset Store <br>"Crosshair Pack" by Kenney Vleugels <br>"3D Game Lamppost" by Tolik_Cola from the Unity Asset Store<br>"School Supplies" by Rodolfo Rubens from the Unity Asset Store <br>"Books Pack" and "Modular Sofa FREE" by Vertex Studio from the Unity Asset Store
 "RPG text speech sound" by 666HeroHero on Pixabay <br>"door-open-close" by j-tap on Pixabay <br>"Button and Interface" by StudioAlivioGlobal on Pixabay <br>"Night Sky Sound Effect 01" by Subhasis Mandal on Pixabay <br>"collect" by Wagna on Pixabay
 Song: "Somewhere In The Clouds by Keys Of Moon" by Keys of Moon, muisc powered by BreakingCopyright, Creative Commons (BY 3.0) <br>Feminism: Wages Against Housework podcast episode by Jake Kao
