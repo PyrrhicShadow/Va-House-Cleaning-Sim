@@ -214,7 +214,10 @@ namespace PyrrhicSilva
         {
             PlayerMovement();
             endGameCanvas.gameObject.SetActive(true);
-            music.Play();
+            if (!music.isPlaying)
+            {
+                music.Play();
+            }
             // Debug.Log("End game.");
         }
 

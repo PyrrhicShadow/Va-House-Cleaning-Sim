@@ -1144,8 +1144,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 44
+  m_fontSizeBase: 44
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1915,7 +1915,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1566745931
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2054,7 +2054,8 @@ MonoBehaviour:
   animator: {fileID: 0}
   animationTime: 1.5
   headers:
-  - Programming, Game Design, Art
+  - 
+  - 
   - Additional Programming
   - Additional Art
   - Additional Art (cont.)
@@ -2063,7 +2064,8 @@ MonoBehaviour:
   - Special Thanks
   - 
   bodies:
-  - Pyrrhic Silva (Jake Kao)
+  - A game by Pyrrhic Silva (Jake Kao)
+  - 'Featuring podcast episode Feminism: Wages Against Housework by Jake Kao'
   - Billboards by John French on Game Dev Beginner <br>Unity Subtitle Manager by
     LordEvilM44 on GitHub under the MIT License <br>"Starter Assets - First Person
     Character Controller" by Unity Technologies from the Unity Asset Store
@@ -2082,8 +2084,7 @@ MonoBehaviour:
     Sky Sound Effect 01" by Subhasis Mandal on Pixabay <br>"collect" by Wagna on
     Pixabay'
   - 'Song: "Somewhere In The Clouds by Keys Of Moon" by Keys of Moon, muisc powered
-    by BreakingCopyright, Creative Commons (BY 3.0) <br>Feminism: Wages Against Housework
-    podcast episode by Jake Kao'
+    by BreakingCopyright, Creative Commons (BY 3.0)'
   - "Mom and Dad <br>Muga <br>Hollow Sweed and Lest\xE2t<br>Davey Wreden's The Beginner's
     Guide"
   - Thank you for playing!
@@ -2417,11 +2418,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"Rag" and "Cardboard Boxes with Tape" by GVODZY from the Unity Asset Store
-    <br>"Crosshair Pack" by Kenney Vleugels <br>"3D Game Lamppost" by Tolik_Cola
-    from the Unity Asset Store<br>"School Supplies" by Rodolfo Rubens from the Unity
-    Asset Store <br>"Books Pack" and "Modular Sofa FREE" by Vertex Studio from the
-    Unity Asset Store'
+  m_text: A game by Pyrrhic Silva (Jake Kao)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2452,8 +2449,8 @@ MonoBehaviour:
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMin: 25
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -2527,7 +2524,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -632651723251485753, guid: 63751c7a6bc0dab4a87f3a50007c8f1c, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6591d07bd28da7f48975b6ad3dd5ce93, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.518
   m_Pitch: 1
   Loop: 1
   Mute: 0
