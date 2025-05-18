@@ -23,6 +23,10 @@ Cleaning jobs include
 
 Featuring a podcast by Pyrrhic Silva for your listening enjoyment. 
 
+Other suggested listening include: 
+* "The Artist is Absent: Davey Wreden and The Beginner's Guide" by Inuendo Studios - https://www.youtube.com/watch?v=4N6y6LEwsKc
+* "The Beginner's Guide: A Needlessly Thorough Analysis" by WhaleMilk - https://www.youtube.com/watch?v=J2HmBOorbYY
+
 ## Credits 
 
 ### Additional Programming 
